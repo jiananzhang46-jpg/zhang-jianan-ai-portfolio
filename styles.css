@@ -427,7 +427,7 @@ button {
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(6, 19, 34, 0.06) 0%, rgba(6, 19, 34, 0.32) 100%),
-    url("assets/about-story-showcase.jpg") right center / cover no-repeat;
+    url("assets/about-story-showcase-wide.jpg") right center / cover no-repeat;
   box-shadow: var(--shadow);
   will-change: background-position;
 }
