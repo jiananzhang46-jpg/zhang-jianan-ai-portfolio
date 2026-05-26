@@ -405,6 +405,11 @@ button {
   align-items: end;
 }
 
+.about-artwork {
+  display: none;
+  width: 100%;
+}
+
 .about-body .lead {
   margin: 0 0 43px;
   font-size: clamp(18px, 2.1vw, 22px);
@@ -422,7 +427,7 @@ button {
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(6, 19, 34, 0.06) 0%, rgba(6, 19, 34, 0.32) 100%),
-    url("assets/about-silver-tree-landscape.jpg") center center / cover no-repeat;
+    url("assets/about-story-showcase.jpg") right center / cover no-repeat;
   box-shadow: var(--shadow);
   will-change: background-position;
 }
@@ -614,6 +619,16 @@ button {
 }
 
 @media (min-width: 821px) {
+  .about-showcase {
+    display: block;
+  }
+
+  .about-showcase .about-artwork {
+    display: block;
+  }
+
+  .about-showcase .section-heading,
+  .about-showcase .about-body,
   .workflow-showcase .section-heading,
   .workflow-showcase .method-grid {
     width: 1px;

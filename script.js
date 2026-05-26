@@ -78,7 +78,7 @@ function closeMenu() {
 function setupRevealAnimations() {
   const groups = [
     ".shortcuts .shortcut",
-    ".about .section-heading, .about-body",
+    ".about-artwork, .about .section-heading, .about-body",
     ".films .section-heading, .film-card",
     ".workflow-artwork, .workflow .section-heading, .method-grid article",
     ".design .section-heading, .design-card",
