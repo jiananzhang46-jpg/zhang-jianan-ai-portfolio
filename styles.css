@@ -223,8 +223,8 @@ button {
 
 .hero-overlay {
   background:
-    linear-gradient(90deg, rgba(3, 12, 22, 0.84) 0%, rgba(3, 12, 22, 0.58) 36%, rgba(3, 12, 22, 0.18) 70%),
-    linear-gradient(0deg, rgba(3, 12, 22, 0.68) 0%, transparent 38%);
+    linear-gradient(90deg, rgba(3, 12, 22, 0.88) 0%, rgba(3, 12, 22, 0.65) 38%, rgba(3, 12, 22, 0.2) 72%),
+    linear-gradient(0deg, rgba(3, 12, 22, 0.7) 0%, transparent 40%);
 }
 
 .hero-content {
