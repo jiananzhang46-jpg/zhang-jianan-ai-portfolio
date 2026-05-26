@@ -7,6 +7,8 @@ const videoTitle = document.querySelector("[data-video-title]");
 const closeButtons = document.querySelectorAll("[data-close-video]");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+const hero = document.querySelector(".hero");
+const magneticActions = document.querySelectorAll(".header-action, .button, .contact-links a");
 let trigger = null;
 let closeTimer = null;
 let scrollFrame = null;
@@ -21,12 +23,20 @@ function syncMotionPreference() {
   document.documentElement.classList.toggle("motion-enabled", allowsMotion());
   if (!allowsMotion()) {
     document.documentElement.style.removeProperty("--hero-offset");
+    resetHeroPointerMotion();
+    resetMagneticActions();
     document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
   }
 }
 
 function updateHeader() {
   header.classList.toggle("is-scrolled", window.scrollY > 24);
+}
+
+function updateScrollProgress() {
+  const availableScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = availableScroll > 0 ? Math.min(window.scrollY / availableScroll, 1) : 0;
+  document.documentElement.style.setProperty("--page-progress", progress.toFixed(4));
 }
 
 function updateHeroMotion() {
@@ -61,12 +71,70 @@ function updateNavigation() {
 function onScroll() {
   updateHeader();
   updateNavigation();
+  updateScrollProgress();
   if (scrollFrame !== null) {
     return;
   }
   scrollFrame = window.requestAnimationFrame(() => {
     updateHeroMotion();
     scrollFrame = null;
+  });
+}
+
+function resetHeroPointerMotion() {
+  if (!hero) {
+    return;
+  }
+  hero.classList.remove("is-interactive");
+  hero.style.removeProperty("--hero-pan-x");
+  hero.style.removeProperty("--hero-pan-y");
+  hero.style.removeProperty("--spotlight-x");
+  hero.style.removeProperty("--spotlight-y");
+}
+
+function setupHeroPointerMotion() {
+  if (!hero) {
+    return;
+  }
+  hero.addEventListener("pointermove", (event) => {
+    if (!finePointer.matches || !allowsMotion()) {
+      return;
+    }
+    const bounds = hero.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width;
+    const y = (event.clientY - bounds.top) / bounds.height;
+    hero.classList.add("is-interactive");
+    hero.style.setProperty("--spotlight-x", `${x * 100}%`);
+    hero.style.setProperty("--spotlight-y", `${y * 100}%`);
+    hero.style.setProperty("--hero-pan-x", `${(x - 0.5) * -8}px`);
+    hero.style.setProperty("--hero-pan-y", `${(y - 0.5) * -5}px`);
+  });
+  hero.addEventListener("pointerleave", resetHeroPointerMotion);
+}
+
+function resetMagneticActions() {
+  magneticActions.forEach((element) => {
+    element.style.removeProperty("--magnetic-x");
+    element.style.removeProperty("--magnetic-y");
+  });
+}
+
+function setupMagneticActions() {
+  magneticActions.forEach((element) => {
+    element.addEventListener("pointermove", (event) => {
+      if (!finePointer.matches || !allowsMotion()) {
+        return;
+      }
+      const bounds = element.getBoundingClientRect();
+      const x = event.clientX - bounds.left - bounds.width / 2;
+      const y = event.clientY - bounds.top - bounds.height / 2;
+      element.style.setProperty("--magnetic-x", `${x * 0.12}px`);
+      element.style.setProperty("--magnetic-y", `${y * 0.16}px`);
+    });
+    element.addEventListener("pointerleave", () => {
+      element.style.removeProperty("--magnetic-x");
+      element.style.removeProperty("--magnetic-y");
+    });
   });
 }
 
@@ -237,6 +305,7 @@ menuToggle.addEventListener("click", () => {
 menuLinks.forEach((link) => link.addEventListener("click", closeMenu));
 window.addEventListener("scroll", onScroll, { passive: true });
 reducedMotion.addEventListener("change", syncMotionPreference);
+window.addEventListener("resize", onScroll, { passive: true });
 
 document.querySelectorAll("[data-video]").forEach((button) => {
   button.addEventListener("click", () => openVideo(button));
@@ -254,4 +323,6 @@ syncMotionPreference();
 setupRevealAnimations();
 setupCounterAnimation();
 setupFilmCardMotion();
+setupHeroPointerMotion();
+setupMagneticActions();
 onScroll();

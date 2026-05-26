@@ -13,11 +13,11 @@ assets/*
 !assets/nav-bear-purple.jpg
 !assets/nav-bear-red.jpg
 !assets/nav-bear-yellow.jpg
-!assets/poster-baigui-card.jpg
-!assets/poster-chumaxian-card.jpg
-!assets/poster-daji-card.jpg
-!assets/poster-ek-card.jpg
-!assets/poster-erlang-card.jpg
+!assets/poster-project-daji.jpg
+!assets/poster-project-pets.jpg
+!assets/poster-project-nezha.jpg
+!assets/poster-project-chair.jpg
+!assets/poster-project-liveaction.jpg
 !assets/design-campaign.webp
 !assets/design-cleaning-brush.webp
 !assets/design-drain-cleaner.webp
@@ -27,10 +27,11 @@ assets/*
 !assets/zhang-jianan-aigc-resume.pdf
 !assets/videos/
 assets/videos/*
-!assets/videos/baigui.mp4
-!assets/videos/chumaxian.mp4
-!assets/videos/daji.mp4
-!assets/videos/ek.mp4
-!assets/videos/erlang.mp4
+!assets/videos/project-daji.mp4
+!assets/videos/project-pets.mp4
+!assets/videos/project-nezha.mp4
+!assets/videos/project-chair.mp4
+!assets/videos/project-liveaction.mp4
 
 .vercel/
+.media-tools/
