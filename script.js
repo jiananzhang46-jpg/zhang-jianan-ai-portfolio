@@ -80,7 +80,7 @@ function setupRevealAnimations() {
     ".shortcuts .shortcut",
     ".about .section-heading, .about-body",
     ".films .section-heading, .film-card",
-    ".workflow .section-heading, .method-grid article",
+    ".workflow-artwork, .workflow .section-heading, .method-grid article",
     ".design .section-heading, .design-card",
     ".resume .section-heading, .timeline-item",
     ".contact-panel",

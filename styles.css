@@ -422,7 +422,7 @@ button {
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(6, 19, 34, 0.06) 0%, rgba(6, 19, 34, 0.32) 100%),
-    url("assets/about-moonlit-landscape.jpg") center center / cover no-repeat;
+    url("assets/about-silver-tree-landscape.jpg") center center / cover no-repeat;
   box-shadow: var(--shadow);
   will-change: background-position;
 }
@@ -598,6 +598,33 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
+}
+
+.workflow-artwork {
+  width: 100%;
+  display: block;
+  border-radius: 27px;
+  box-shadow: var(--shadow);
+  transition: transform 0.42s ease, box-shadow 0.42s ease;
+}
+
+.workflow-artwork:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--lift-shadow);
+}
+
+@media (min-width: 821px) {
+  .workflow-showcase .section-heading,
+  .workflow-showcase .method-grid {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
 }
 
 .method-grid article {
@@ -1123,6 +1150,38 @@ button {
   .method-grid,
   .design-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workflow-showcase {
+    margin-top: clamp(76px, 10vw, 96px);
+    padding: 48px 16px 18px;
+    border-radius: 25px;
+    color: var(--white);
+    background:
+      linear-gradient(180deg, rgba(4, 12, 23, 0.76), rgba(4, 12, 23, 0.94)),
+      url("assets/workflow-cinematic-method.jpg") 70% center / cover no-repeat;
+    box-shadow: var(--shadow);
+  }
+
+  .workflow-artwork {
+    display: none;
+  }
+
+  .workflow-showcase .eyebrow,
+  .workflow-showcase .section-intro,
+  .workflow-showcase .method-grid p {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .workflow-showcase .method-grid article {
+    color: var(--white);
+    background: rgba(10, 20, 36, 0.62);
+    border: 1px solid rgba(129, 147, 255, 0.25);
+    backdrop-filter: blur(9px);
+  }
+
+  .workflow-showcase .method-grid span {
+    color: #aebaff;
   }
 
   .split-heading {

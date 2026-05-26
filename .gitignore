@@ -1,6 +1,8 @@
 # Keep design source assets local; publish only files referenced by the website.
 assets/*
 !assets/about-moonlit-landscape.jpg
+!assets/about-silver-tree-landscape.jpg
+!assets/workflow-cinematic-method.jpg
 !assets/hero-immortal-night.jpg
 !assets/nav-bear-blue.jpg
 !assets/nav-bear-cyan.jpg
