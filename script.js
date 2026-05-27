@@ -15,6 +15,7 @@ const galleryCloseButtons = document.querySelectorAll("[data-close-gallery]");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 const hero = document.querySelector(".hero");
+const workflowMedia = document.querySelector(".workflow-media");
 const magneticActions = document.querySelectorAll(".header-action, .button, .contact-links a");
 const galleries = {
   golden: {
@@ -85,6 +86,7 @@ function syncMotionPreference() {
   if (!allowsMotion()) {
     document.documentElement.style.removeProperty("--hero-offset");
     resetHeroPointerMotion();
+    resetWorkflowMotion();
     resetMagneticActions();
     document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
   }
@@ -173,6 +175,35 @@ function setupHeroPointerMotion() {
   hero.addEventListener("pointerleave", resetHeroPointerMotion);
 }
 
+function resetWorkflowMotion() {
+  if (!workflowMedia) {
+    return;
+  }
+  workflowMedia.style.removeProperty("--workflow-focus-x");
+  workflowMedia.style.removeProperty("--workflow-focus-y");
+  workflowMedia.style.removeProperty("--workflow-tilt-x");
+  workflowMedia.style.removeProperty("--workflow-tilt-y");
+}
+
+function setupWorkflowMotion() {
+  if (!workflowMedia) {
+    return;
+  }
+  workflowMedia.addEventListener("pointermove", (event) => {
+    if (!finePointer.matches || !allowsMotion()) {
+      return;
+    }
+    const bounds = workflowMedia.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width;
+    const y = (event.clientY - bounds.top) / bounds.height;
+    workflowMedia.style.setProperty("--workflow-focus-x", `${x * 100}%`);
+    workflowMedia.style.setProperty("--workflow-focus-y", `${y * 100}%`);
+    workflowMedia.style.setProperty("--workflow-tilt-x", `${(0.5 - y) * 1.35}deg`);
+    workflowMedia.style.setProperty("--workflow-tilt-y", `${(x - 0.5) * 1.35}deg`);
+  });
+  workflowMedia.addEventListener("pointerleave", resetWorkflowMotion);
+}
+
 function resetMagneticActions() {
   magneticActions.forEach((element) => {
     element.style.removeProperty("--magnetic-x");
@@ -209,7 +240,7 @@ function setupRevealAnimations() {
     ".modules-heading, .shortcuts .shortcut",
     ".about-artwork, .about .section-heading, .about-body",
     ".films .section-heading, .film-card",
-    ".workflow-artwork, .workflow .section-heading, .method-grid article",
+    ".workflow-media, .workflow .section-heading, .method-grid article",
     ".design .section-heading, .design-card",
     ".resume .section-heading, .timeline-item",
     ".contact-panel",
@@ -469,5 +500,6 @@ setupRevealAnimations();
 setupCounterAnimation();
 setupFilmCardMotion();
 setupHeroPointerMotion();
+setupWorkflowMotion();
 setupMagneticActions();
 onScroll();

@@ -744,17 +744,52 @@ button {
   gap: 14px;
 }
 
+.workflow-media {
+  --workflow-focus-x: 50%;
+  --workflow-focus-y: 50%;
+  --workflow-tilt-x: 0deg;
+  --workflow-tilt-y: 0deg;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 27px;
+  box-shadow: var(--shadow);
+  transform: perspective(1100px) rotateX(var(--workflow-tilt-x)) rotateY(var(--workflow-tilt-y));
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.workflow-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle 270px at var(--workflow-focus-x) var(--workflow-focus-y), rgba(151, 180, 255, 0.2), transparent 68%),
+    linear-gradient(113deg, transparent 22%, rgba(255, 255, 255, 0.12) 47%, transparent 65%);
+  opacity: 0;
+  transition: opacity 0.34s ease;
+}
+
 .workflow-artwork {
   width: 100%;
   display: block;
-  border-radius: 27px;
-  box-shadow: var(--shadow);
-  transition: transform 0.42s ease, box-shadow 0.42s ease;
+  border-radius: inherit;
+  transform-origin: var(--workflow-focus-x) var(--workflow-focus-y);
+  transition: transform 0.55s cubic-bezier(0.2, 0.7, 0, 1), filter 0.45s ease;
 }
 
-.workflow-artwork:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--lift-shadow);
+.motion-enabled .workflow-media:hover {
+  transform: perspective(1100px) translateY(-8px) scale(1.012) rotateX(var(--workflow-tilt-x)) rotateY(var(--workflow-tilt-y));
+  box-shadow: 0 27px 57px rgba(14, 31, 47, 0.19);
+}
+
+.motion-enabled .workflow-media:hover::after {
+  opacity: 1;
+}
+
+.motion-enabled .workflow-media:hover .workflow-artwork {
+  transform: scale(1.07);
+  filter: brightness(1.035);
 }
 
 @media (min-width: 821px) {
@@ -1444,6 +1479,16 @@ button {
     transform: none;
   }
 
+  .workflow-media,
+  .workflow-media:hover,
+  .workflow-media:hover .workflow-artwork {
+    transform: none;
+  }
+
+  .workflow-media::after {
+    display: none;
+  }
+
   .reveal {
     opacity: 1;
     transform: none;
@@ -1561,7 +1606,7 @@ button {
     box-shadow: var(--shadow);
   }
 
-  .workflow-artwork {
+  .workflow-media {
     display: none;
   }
 
