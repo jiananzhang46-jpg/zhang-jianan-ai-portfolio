@@ -5,12 +5,73 @@ const modal = document.querySelector("[data-video-modal]");
 const player = document.querySelector("[data-video-player]");
 const videoTitle = document.querySelector("[data-video-title]");
 const closeButtons = document.querySelectorAll("[data-close-video]");
+const galleryModal = document.querySelector("[data-gallery-modal]");
+const galleryImage = document.querySelector("[data-gallery-image]");
+const galleryTitle = document.querySelector("[data-gallery-title]");
+const galleryCaption = document.querySelector("[data-gallery-caption]");
+const galleryPosition = document.querySelector("[data-gallery-position]");
+const galleryThumbs = document.querySelector("[data-gallery-thumbs]");
+const galleryCloseButtons = document.querySelectorAll("[data-close-gallery]");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 const hero = document.querySelector(".hero");
 const magneticActions = document.querySelectorAll(".header-action, .button, .contact-links a");
+const galleries = {
+  golden: {
+    title: "《金色》视觉设定",
+    items: [
+      { src: "assets/settings/golden-character.jpg", alt: "二郎显圣真君角色三视图", caption: "人物设定 · 二郎显圣真君三视图" },
+      { src: "assets/settings/golden-world.jpg", alt: "金色项目仙界场景", caption: "场景设定 · 仙界世界观" },
+      { src: "assets/settings/golden-prop.jpg", alt: "金色项目神话角色与法器设定", caption: "角色与道具 · 神话体系延展" },
+    ],
+  },
+  monks: {
+    title: "《小道士与小和尚》设定",
+    items: [
+      { src: "assets/settings/monks-scene.jpg", alt: "灯火古镇的场景设计", caption: "场景设定 · 灯火古镇" },
+      { src: "assets/settings/monks-character.jpg", alt: "小道士定妆人物设定", caption: "人物设定 · 小道士定妆" },
+      { src: "assets/settings/monks-prop.jpg", alt: "小道士与小和尚关键道具", caption: "道具设定 · 故事关键物件" },
+    ],
+  },
+  cyber: {
+    title: "《赛博废土机能风》设定",
+    items: [
+      { src: "assets/settings/cyber-scene.jpg", alt: "赛博废土城市废墟场景", caption: "场景设定 · 城市废墟" },
+      { src: "assets/settings/cyber-character.jpg", alt: "赛博废土战士人物设定", caption: "人物设定 · 废土战士" },
+      { src: "assets/settings/cyber-engineer.jpg", alt: "赛博废土工程师人物设定", caption: "人物设定 · 工程师" },
+    ],
+  },
+  youyou: {
+    title: "《悠悠我心》设定",
+    items: [
+      { src: "assets/settings/youyou-character.jpg", alt: "悠悠我心女主角人物设定", caption: "人物设定 · 宗清婉" },
+      { src: "assets/settings/youyou-partner.jpg", alt: "悠悠我心男主角人物设定", caption: "人物设定 · 李白" },
+      { src: "assets/settings/youyou-scene.jpg", alt: "悠悠我心故事场景图", caption: "场景设定 · 情绪氛围" },
+    ],
+  },
+  wedding: {
+    title: "《结婚》设定",
+    items: [
+      { src: "assets/settings/wedding-character.jpg", alt: "结婚项目新娘人物设定", caption: "人物设定 · 新娘" },
+      { src: "assets/settings/wedding-partner.jpg", alt: "结婚项目男主人物设定", caption: "人物设定 · 男主" },
+      { src: "assets/settings/wedding-scene.jpg", alt: "结婚项目喜房场景", caption: "场景设定 · 喜房" },
+    ],
+  },
+  girl: {
+    title: "《丫头也好命》设定",
+    items: [
+      { src: "assets/settings/girl-character.jpg", alt: "丫头也好命女主人物设定", caption: "人物设定 · 女主" },
+      { src: "assets/settings/girl-support.jpg", alt: "丫头也好命二丫人物设定", caption: "人物设定 · 二丫" },
+      { src: "assets/settings/girl-scene.jpg", alt: "丫头也好命房屋内部场景", caption: "场景设定 · 房屋内部" },
+    ],
+  },
+};
 let trigger = null;
 let closeTimer = null;
+let galleryTrigger = null;
+let galleryCloseTimer = null;
+let activeGallery = null;
+let activeGalleryIndex = 0;
 let scrollFrame = null;
 
 document.querySelector("#year").textContent = new Date().getFullYear();
@@ -297,6 +358,72 @@ function closeVideo() {
   closeTimer = window.setTimeout(finishClosingVideo, 240);
 }
 
+function renderGallery() {
+  const item = activeGallery.items[activeGalleryIndex];
+  galleryImage.src = item.src;
+  galleryImage.alt = item.alt;
+  galleryTitle.textContent = activeGallery.title;
+  galleryCaption.textContent = item.caption;
+  galleryPosition.textContent = `${String(activeGalleryIndex + 1).padStart(2, "0")} / ${String(activeGallery.items.length).padStart(2, "0")}`;
+
+  const thumbs = activeGallery.items.map((thumb, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `gallery-thumb${index === activeGalleryIndex ? " is-current" : ""}`;
+    button.setAttribute("aria-label", `查看第 ${index + 1} 张：${thumb.caption}`);
+    const image = document.createElement("img");
+    image.src = thumb.src;
+    image.alt = "";
+    image.loading = "lazy";
+    button.append(image);
+    button.addEventListener("click", () => {
+      activeGalleryIndex = index;
+      renderGallery();
+    });
+    return button;
+  });
+  galleryThumbs.replaceChildren(...thumbs);
+}
+
+function openGallery(button) {
+  window.clearTimeout(galleryCloseTimer);
+  galleryTrigger = button;
+  activeGallery = galleries[button.dataset.gallery];
+  activeGalleryIndex = 0;
+  renderGallery();
+  galleryModal.hidden = false;
+  document.body.classList.add("modal-open");
+  window.requestAnimationFrame(() => galleryModal.classList.add("is-open"));
+  galleryModal.querySelector(".close-button").focus();
+}
+
+function finishClosingGallery() {
+  galleryImage.removeAttribute("src");
+  galleryModal.hidden = true;
+  galleryTrigger?.focus();
+}
+
+function closeGallery() {
+  if (galleryModal.hidden) {
+    return;
+  }
+  galleryModal.classList.remove("is-open");
+  document.body.classList.remove("modal-open");
+  if (!allowsMotion()) {
+    finishClosingGallery();
+    return;
+  }
+  galleryCloseTimer = window.setTimeout(finishClosingGallery, 240);
+}
+
+function changeGallery(offset) {
+  if (!activeGallery) {
+    return;
+  }
+  activeGalleryIndex = (activeGalleryIndex + offset + activeGallery.items.length) % activeGallery.items.length;
+  renderGallery();
+}
+
 menuToggle.addEventListener("click", () => {
   const isOpen = header.classList.toggle("menu-open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
@@ -313,9 +440,27 @@ document.querySelectorAll("[data-video]").forEach((button) => {
 
 closeButtons.forEach((button) => button.addEventListener("click", closeVideo));
 
+document.querySelectorAll("[data-gallery]").forEach((button) => {
+  button.addEventListener("click", () => openGallery(button));
+});
+
+galleryCloseButtons.forEach((button) => button.addEventListener("click", closeGallery));
+document.querySelector("[data-gallery-prev]").addEventListener("click", () => changeGallery(-1));
+document.querySelector("[data-gallery-next]").addEventListener("click", () => changeGallery(1));
+
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && !modal.hidden) {
-    closeVideo();
+  if (event.key === "Escape") {
+    if (!galleryModal.hidden) {
+      closeGallery();
+    } else if (!modal.hidden) {
+      closeVideo();
+    }
+  }
+  if (!galleryModal.hidden && event.key === "ArrowLeft") {
+    changeGallery(-1);
+  }
+  if (!galleryModal.hidden && event.key === "ArrowRight") {
+    changeGallery(1);
   }
 });
 

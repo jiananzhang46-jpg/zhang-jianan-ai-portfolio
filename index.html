@@ -19,7 +19,7 @@
       <nav class="site-nav" id="site-nav" aria-label="主导航">
         <a href="#films">AI 漫剧</a>
         <a href="#workflow">创作方法</a>
-        <a href="#design">商业作品</a>
+        <a href="#design">美术设定</a>
         <a href="#resume">经历</a>
       </nav>
       <a class="header-action" href="#contact">联系我</a>
@@ -28,7 +28,6 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <img class="hero-background" src="assets/hero-moonlit-clouds.jpg" alt="" />
-        <div class="hero-overlay"></div>
         <div class="hero-content">
           <p class="hero-kicker">AI COMIC DRAMA DESIGNER · BEIJING</p>
           <h1 id="hero-title">让 AI 漫剧<br />拥有电影般的画面</h1>
@@ -64,8 +63,8 @@
         </a>
         <a class="shortcut" href="#design">
           <img src="assets/nav-bear-cyan.jpg" alt="" />
-          <span>商业视觉</span>
-          <small>设计作品</small>
+          <span>美术设定</span>
+          <small>角色场景</small>
         </a>
         <a class="shortcut" href="#resume">
           <img src="assets/nav-bear-purple.jpg" alt="" />
@@ -201,17 +200,35 @@
 
       <section class="design section" id="design" aria-labelledby="design-title">
         <div class="section-heading centered">
-          <p class="eyebrow">DESIGN FOUNDATION</p>
-          <h2 id="design-title">商业视觉作品</h2>
-          <p class="section-note">过往电商详情页与品牌传播项目，构成 AI 视觉创作的设计基础</p>
+          <p class="eyebrow">AI DRAMA VISUAL DEVELOPMENT</p>
+          <h2 id="design-title">人物设定 · 场景 · 道具</h2>
+          <p class="section-note">从角色定妆到世界观场景与关键道具，呈现 AI 漫剧创作中的视觉开发</p>
         </div>
         <div class="design-grid">
-          <figure class="design-card"><img src="assets/design-ginseng-green.webp" alt="滋补产品电商详情页" loading="lazy" /><figcaption>滋补产品详情页</figcaption></figure>
-          <figure class="design-card"><img src="assets/design-herb-detail.webp" alt="草本产品详情页" loading="lazy" /><figcaption>草本健康产品</figcaption></figure>
-          <figure class="design-card"><img src="assets/design-cleaning-brush.webp" alt="家居清洁产品详情页" loading="lazy" /><figcaption>家居清洁产品</figcaption></figure>
-          <figure class="design-card"><img src="assets/design-drain-cleaner.webp" alt="管道清洁产品详情页" loading="lazy" /><figcaption>清洁用品推广</figcaption></figure>
-          <figure class="design-card"><img src="assets/design-health-product.webp" alt="健康品牌产品详情页" loading="lazy" /><figcaption>健康品牌页面</figcaption></figure>
-          <figure class="design-card"><img src="assets/design-campaign.webp" alt="会员活动专题页面" loading="lazy" /><figcaption>会员活动专题</figcaption></figure>
+          <button class="design-card" type="button" data-gallery="golden">
+            <img src="assets/settings/golden-character.jpg" alt="金色项目二郎神人物三视图设定" loading="lazy" />
+            <span class="design-meta"><small>角色 / 世界观 / 道具</small><strong>《金色》</strong><em>查看设定图集 · 03</em></span>
+          </button>
+          <button class="design-card" type="button" data-gallery="monks">
+            <img src="assets/settings/monks-scene.jpg" alt="小道士与小和尚古镇场景设定" loading="lazy" />
+            <span class="design-meta"><small>人物 / 场景 / 道具</small><strong>《小道士与小和尚》</strong><em>查看设定图集 · 03</em></span>
+          </button>
+          <button class="design-card" type="button" data-gallery="cyber">
+            <img src="assets/settings/cyber-scene.jpg" alt="赛博废土机能风城市废墟场景设定" loading="lazy" />
+            <span class="design-meta"><small>角色 / 废土场景</small><strong>《赛博废土机能风》</strong><em>查看设定图集 · 03</em></span>
+          </button>
+          <button class="design-card" type="button" data-gallery="youyou">
+            <img src="assets/settings/youyou-character.jpg" alt="悠悠我心女主角人物设定" loading="lazy" />
+            <span class="design-meta"><small>角色定妆 / 关系设定</small><strong>《悠悠我心》</strong><em>查看设定图集 · 03</em></span>
+          </button>
+          <button class="design-card" type="button" data-gallery="wedding">
+            <img src="assets/settings/wedding-character.jpg" alt="结婚项目新娘人物设定" loading="lazy" />
+            <span class="design-meta"><small>角色 / 婚礼空间</small><strong>《结婚》</strong><em>查看设定图集 · 03</em></span>
+          </button>
+          <button class="design-card" type="button" data-gallery="girl">
+            <img src="assets/settings/girl-character.jpg" alt="丫头也好命人物场景设定" loading="lazy" />
+            <span class="design-meta"><small>人物 / 村落场景</small><strong>《丫头也好命》</strong><em>查看设定图集 · 03</em></span>
+          </button>
         </div>
       </section>
 
@@ -284,6 +301,28 @@
           <button class="close-button" type="button" data-close-video aria-label="关闭视频">关闭</button>
         </div>
         <video class="video-player" data-video-player controls playsinline preload="metadata"></video>
+      </section>
+    </div>
+    <div class="gallery-modal" data-gallery-modal hidden>
+      <div class="modal-backdrop" data-close-gallery></div>
+      <section class="gallery-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
+        <div class="modal-head">
+          <div class="gallery-heading">
+            <p>VISUAL DEVELOPMENT</p>
+            <h2 id="gallery-title" data-gallery-title>设定图集</h2>
+          </div>
+          <button class="close-button" type="button" data-close-gallery aria-label="关闭图集">关闭</button>
+        </div>
+        <figure class="gallery-stage">
+          <img data-gallery-image src="" alt="" />
+          <figcaption data-gallery-caption></figcaption>
+        </figure>
+        <div class="gallery-controls">
+          <button class="gallery-nav" type="button" data-gallery-prev>上一张</button>
+          <span data-gallery-position>01 / 03</span>
+          <button class="gallery-nav" type="button" data-gallery-next>下一张</button>
+        </div>
+        <div class="gallery-thumbs" data-gallery-thumbs aria-label="图集缩略图"></div>
       </section>
     </div>
     <script src="script.js"></script>
