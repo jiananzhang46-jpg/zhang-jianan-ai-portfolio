@@ -1069,6 +1069,12 @@ button {
   object-fit: contain;
 }
 
+.douyin-card img {
+  height: auto;
+  background: transparent;
+  object-fit: initial;
+}
+
 .qr-card strong {
   margin-bottom: 7px;
   font-size: 17px;
