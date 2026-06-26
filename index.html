@@ -5,324 +5,316 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="张佳楠，AI 漫剧设计师。拥有 10 年以上视觉设计经验，专注角色设定、场景设计、分镜与影视化 AI 画面创作。"
+      content="张佳楠个人作品集，展示 AI 漫剧、AIGC 视觉设定、动态短片、分镜方法与作品案例。"
     />
-    <title>张佳楠 | AI 漫剧设计师</title>
-    <link rel="stylesheet" href="styles.css?v=20260527-qr-equal" />
+    <title>张佳楠 | JIANAN Portfolio</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="portfolio-dark.css?v=20260626-github-live-1" />
   </head>
   <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="张佳楠个人品牌网站首页">JIANAN.</a>
-      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
-        菜单
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="主导航">
-        <a href="#films">AI 漫剧</a>
-        <a href="#workflow">创作方法</a>
-        <a href="#design">美术设定</a>
-        <a href="#resume">经历</a>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="critter-layer" aria-hidden="true"></div>
+    <header class="topbar" data-header>
+      <a class="logo" href="#top" aria-label="回到首页">
+        <span>J</span>
+        <strong>JIANAN</strong>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">菜单</button>
+      <nav class="nav" id="site-nav" aria-label="主导航">
+        <a href="#works">工作经历</a>
+        <a href="#visuals">精选作品</a>
+        <a href="#strengths">个人优势</a>
       </nav>
-      <a class="header-action" href="#contact">联系我</a>
+      <a class="top-cta" href="#contact">联系我</a>
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-background" src="assets/hero-moonlit-clouds.jpg" alt="" />
-        <div class="hero-content">
-          <p class="hero-kicker">AI COMIC DRAMA DESIGNER · BEIJING</p>
-          <h1 id="hero-title">让 AI 漫剧<br />拥有电影般的画面</h1>
-          <p class="hero-identity"><strong>张佳楠</strong><span>AI 漫剧设计师</span></p>
-          <p class="hero-summary">
-            10 年以上视觉设计经验，专注角色一致性、叙事场景、分镜脚本与影视化画面创作。
-          </p>
-          <div class="hero-buttons">
-            <a class="button primary" href="#films">观看作品</a>
-            <a class="button secondary" href="assets/zhang-jianan-aigc-resume.pdf" target="_blank">查看简历</a>
-          </div>
-          <div class="hero-status">
-            <span>当前在训</span>
-            <strong>巧匠 AI 漫剧创作营 · 1期</strong>
-            <small>2026.03.09 - 2026.05.28</small>
+      <section class="hero-screen" data-hero>
+        <canvas class="ambient-canvas" data-motion-canvas aria-hidden="true"></canvas>
+        <img class="hero-bg" src="assets/hero-moonlit-clouds.jpg" alt="" aria-hidden="true" />
+
+        <div class="hero-title">
+          <p class="kicker">用视觉系统与 AI 工作流</p>
+          <h1>
+            <span>JIANAN</span>
+            PORTFOLIO
+          </h1>
+          <p>让品牌内容更快、更准、更有辨识度</p>
+          <div class="hero-actions">
+            <a class="pill primary" href="#visuals">查看作品</a>
+            <button class="pill ghost" type="button" data-play-current>播放当前作品</button>
           </div>
         </div>
-        <a class="scroll-down" href="#shortcuts" aria-label="继续浏览">
-          <span></span>
-        </a>
-      </section>
 
-      <section class="shortcuts" id="shortcuts" aria-labelledby="modules-title">
-        <header class="modules-heading">
-          <p class="eyebrow">CORE MODULES</p>
-          <h2 id="modules-title">核心模块</h2>
-          <p class="modules-note"><span></span>探索 AI 漫剧创作的全流程<span></span></p>
-        </header>
-        <div class="shortcut-grid">
-          <a class="shortcut" href="#films">
-            <img src="assets/modules/module-ai-drama.jpg" alt="" />
-            <span class="shortcut-title"><b>01</b><strong>AI 漫剧</strong></span>
-            <small>五部作品</small>
-            <i aria-hidden="true">→</i>
-          </a>
-          <a class="shortcut" href="#workflow">
-            <img src="assets/modules/module-creation.jpg" alt="" />
-            <span class="shortcut-title"><b>02</b><strong>创作</strong></span>
-            <small>工作方法</small>
-            <i aria-hidden="true">→</i>
-          </a>
-          <a class="shortcut" href="#design">
-            <img src="assets/modules/module-visual.jpg" alt="" />
-            <span class="shortcut-title"><b>03</b><strong>视觉</strong></span>
-            <small>设计作品</small>
-            <i aria-hidden="true">→</i>
-          </a>
-          <a class="shortcut" href="#resume">
-            <img src="assets/modules/module-resume.jpg" alt="" />
-            <span class="shortcut-title"><b>04</b><strong>经历</strong></span>
-            <small>10 年+</small>
-            <i aria-hidden="true">→</i>
-          </a>
-          <a class="shortcut" href="#about">
-            <img src="assets/modules/module-about.jpg" alt="" />
-            <span class="shortcut-title"><b>05</b><strong>关于</strong></span>
-            <small>AIGC 转型</small>
-            <i aria-hidden="true">→</i>
-          </a>
-          <a class="shortcut" href="#contact">
-            <img src="assets/modules/module-contact.jpg" alt="" />
-            <span class="shortcut-title"><b>06</b><strong>联系</strong></span>
-            <small>合作入口</small>
-            <i aria-hidden="true">→</i>
-          </a>
+        <aside class="hero-meta" data-tilt-card aria-label="当前精选作品">
+          <small data-active-index>01 / 05</small>
+          <h2 data-active-title>《哪吒》动态短片</h2>
+          <p data-active-copy>东方神话角色动态短片，强调角色能量、镜头推进和神话视觉冲击。</p>
+          <img data-hero-image src="assets/poster-project-nezha.jpg" alt="《哪吒》动态短片海报" />
+        </aside>
+
+        <div class="poster-strip" data-poster-strip aria-label="精选作品轮播">
+          <button class="poster-card is-active" type="button" data-project-button="0" aria-pressed="true">
+            <img src="assets/poster-project-nezha.jpg" alt="" />
+            <span>角色动态</span>
+          </button>
+          <button class="poster-card" type="button" data-project-button="1" aria-pressed="false">
+            <img src="assets/poster-project-daji.jpg" alt="" />
+            <span>国风幻想</span>
+          </button>
+          <button class="poster-card" type="button" data-project-button="2" aria-pressed="false">
+            <img src="assets/poster-project-pets.jpg" alt="" />
+            <span>萌宠剧情</span>
+          </button>
+          <button class="poster-card" type="button" data-project-button="3" aria-pressed="false">
+            <img src="assets/poster-project-chair.jpg" alt="" />
+            <span>产品视觉</span>
+          </button>
+          <button class="poster-card" type="button" data-project-button="4" aria-pressed="false">
+            <img src="assets/poster-project-liveaction.jpg" alt="" />
+            <span>真人短片</span>
+          </button>
         </div>
       </section>
 
-      <section class="about about-showcase section" id="about" aria-labelledby="about-title">
-        <img
-          class="about-artwork"
-          src="assets/about-story-showcase-wide.jpg"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-        />
-        <div class="section-heading">
-          <p class="eyebrow">ABOUT ME</p>
-          <h2 id="about-title">从视觉设计走向<br />AI 叙事影像</h2>
-        </div>
-        <div class="about-body">
-          <p class="lead">
-            我是张佳楠，拥有 10 年以上 UI/UX 与视觉设计经验。近年重点深耕 AIGC
-            与 AI 漫剧创作，将成熟的视觉审美、商业思维与 AI 工作流结合，打造更有情绪与节奏的故事画面。
-          </p>
-          <div class="facts">
-            <article><strong>10+</strong><span>年视觉设计经验</span></article>
-            <article><strong>05</strong><span>部 AI 漫剧探索</span></article>
-            <article><strong>AI</strong><span>角色 / 场景 / 分镜</span></article>
+      <section class="about-screen" id="works">
+        <div class="about-shell reveal-item">
+          <div class="portrait-card">
+            <img src="assets/about-moonlit-landscape.jpg" alt="张佳楠 AI 视觉月夜山水作品展示" loading="lazy" />
+            <a href="assets/zhang-jianan-aigc-resume.pdf" target="_blank" rel="noreferrer">PDF 简历</a>
+          </div>
+
+          <div class="about-copy">
+            <p class="kicker">WORK EXPERIENCE</p>
+            <h2>Hi, I am Zhang Jianan!</h2>
+            <p>
+              我是张佳楠，拥有 10 年以上 UI/UX、品牌视觉、电商视觉与网页设计经验。现在专注 AI 漫剧创作，把设计审美、商业理解和 AIGC 工作流结合起来，形成稳定、可复用、可落地的视觉表达。
+            </p>
+            <div class="info-grid">
+              <dl>
+                <dt>当前职位</dt>
+                <dd>AI Visual Designer</dd>
+              </dl>
+              <dl>
+                <dt>专长方向</dt>
+                <dd>Brand / 3D / AIGC</dd>
+              </dl>
+              <dl>
+                <dt>手机</dt>
+                <dd>185-0041-9419</dd>
+              </dl>
+              <dl>
+                <dt>邮箱</dt>
+                <dd>563090126@qq.com</dd>
+              </dl>
+            </div>
+            <div class="stats-row">
+              <article><strong>10+</strong><span>年视觉设计</span></article>
+              <article><strong>30+</strong><span>完整项目经验</span></article>
+              <article><strong>500+</strong><span>AI 视觉资产</span></article>
+            </div>
           </div>
         </div>
-      </section>
 
-      <section class="films section" id="films" aria-labelledby="films-title">
-        <div class="section-heading centered">
-          <p class="eyebrow">FEATURED AI COMIC DRAMA</p>
-          <h2 id="films-title">AI 漫剧作品</h2>
-          <p class="section-note">点击海报即可观看对应视频片段</p>
-        </div>
-        <div class="film-grid">
-          <button
-            class="film-card feature"
-            type="button"
-            data-video="assets/videos/project-nezha.mp4"
-            data-poster="assets/poster-project-nezha.jpg"
-            data-title="《哪吒》动态短片"
-          >
-            <img src="assets/poster-project-nezha.jpg" alt="哪吒 AI 动态短片海报" />
-            <span class="film-content"><small>东方神话 · 角色动态短片</small><strong>《哪吒》</strong></span>
-            <span class="play">播放</span>
-          </button>
-          <button
-            class="film-card"
-            type="button"
-            data-video="assets/videos/project-daji.mp4"
-            data-poster="assets/poster-project-daji.jpg"
-            data-title="《妲己》画面片段"
-          >
-            <img src="assets/poster-project-daji.jpg" alt="妲己 AI 幻想短片海报" loading="lazy" />
-            <span class="film-content"><small>水墨幻想 · 月下灵狐</small><strong>《妲己》</strong></span>
-            <span class="play">播放</span>
-          </button>
-          <button
-            class="film-card"
-            type="button"
-            data-video="assets/videos/project-pets.mp4"
-            data-poster="assets/poster-project-pets.jpg"
-            data-title="《猫狗》剧情片段"
-          >
-            <img src="assets/poster-project-pets.jpg" alt="猫狗 AI 喜剧短片海报" loading="lazy" />
-            <span class="film-content"><small>萌宠喜剧 · 生活剧情</small><strong>《猫狗》</strong></span>
-            <span class="play">播放</span>
-          </button>
-          <button
-            class="film-card"
-            type="button"
-            data-video="assets/videos/project-chair.mp4"
-            data-poster="assets/poster-project-chair.jpg"
-            data-title="《椅子》产品短片"
-          >
-            <img src="assets/poster-project-chair.jpg" alt="椅子 AI 产品短片海报" loading="lazy" />
-            <span class="film-content"><small>产品视觉 · 动态广告</small><strong>《椅子》</strong></span>
-            <span class="play">播放</span>
-          </button>
-          <button
-            class="film-card"
-            type="button"
-            data-video="assets/videos/project-liveaction.mp4"
-            data-poster="assets/poster-project-liveaction.jpg"
-            data-title="《真人短片》剧情片段"
-          >
-            <img src="assets/poster-project-liveaction.jpg" alt="真人 AI 剧情短片海报" loading="lazy" />
-            <span class="film-content"><small>真人剧情 · 情绪叙事</small><strong>《真人短片》</strong></span>
-            <span class="play">播放</span>
-          </button>
+        <div class="timeline reveal-item" aria-label="工作经历时间线">
+          <article>
+            <span>2024.04 - 至今</span>
+            <h3>未来影像科技有限公司</h3>
+            <p>AIGC 视觉设计 / AI 漫剧工作流搭建</p>
+          </article>
+          <article>
+            <span>2020.09 - 2025.03</span>
+            <h3>星火智能科技有限公司</h3>
+            <p>品牌视觉、UI/UX、活动主视觉与设计管理</p>
+          </article>
+          <article>
+            <span>2018.07 - 2020.08</span>
+            <h3>云象互动科技有限公司</h3>
+            <p>电商视觉、网页设计、产品内容包装</p>
+          </article>
         </div>
       </section>
 
-      <section class="workflow workflow-showcase section" id="workflow" aria-labelledby="workflow-title">
-        <div class="workflow-media" aria-hidden="true">
-          <img
-            class="workflow-artwork"
-            src="assets/workflow-cinematic-method.jpg"
-            alt=""
-            loading="lazy"
-          />
+      <section class="works-screen" id="visuals">
+        <div class="section-head reveal-item">
+          <p class="kicker">SELECTED WORKS</p>
+          <h2>视觉作品</h2>
         </div>
-        <div class="section-heading split-heading">
+
+        <div class="work-showcase reveal-item">
+          <div class="work-collage" aria-label="作品拼贴">
+            <div class="work-group portrait-row" aria-label="竖版视频">
+              <button class="collage-tile portrait is-active" type="button" data-work-select="0" aria-pressed="true">
+                <img src="assets/poster-project-nezha.jpg" alt="《哪吒》动态短片" loading="lazy" />
+                <span>角色与潮流</span>
+              </button>
+              <button class="collage-tile portrait" type="button" data-work-select="2" aria-pressed="false">
+                <img src="assets/poster-project-pets.jpg" alt="《猫狗》剧情片段" loading="lazy" />
+                <span>剧情短片</span>
+              </button>
+              <button class="collage-tile portrait" type="button" data-work-select="4" aria-pressed="false">
+                <img src="assets/poster-project-liveaction.jpg" alt="《真人短片》剧情片段" loading="lazy" />
+                <span>真人叙事</span>
+              </button>
+              <button class="collage-tile portrait" type="button" data-work-select="6" aria-pressed="false">
+                <img src="assets/poster-project-dragon-baby.png" alt="《天降龙宝》剧情片段" loading="lazy" />
+                <span>龙宝短剧</span>
+              </button>
+            </div>
+            <div class="work-group landscape-stack" aria-label="横版视频">
+              <button class="collage-tile landscape" type="button" data-work-select="1" aria-pressed="false">
+                <img src="assets/poster-project-daji.jpg" alt="《妲己》画面片段" loading="lazy" />
+                <span>东方幻想</span>
+              </button>
+              <button class="collage-tile landscape" type="button" data-work-select="3" aria-pressed="false">
+                <img src="assets/poster-project-chair.jpg" alt="《椅子》产品短片" loading="lazy" />
+                <span>产品视觉</span>
+              </button>
+              <button class="collage-tile landscape" type="button" data-work-select="5" aria-pressed="false">
+                <img src="assets/poster-project-cps-six-wheel.png" alt="《CPS 六轮滚轮仪》产品视频" loading="lazy" />
+                <span>CPS 产品</span>
+              </button>
+            </div>
+          </div>
+
+          <aside class="work-detail">
+            <button class="work-preview" type="button" data-open-work-preview aria-label="播放当前作品视频">
+              <video
+                data-work-video
+                src="assets/videos/project-nezha.mp4"
+                poster="assets/poster-project-nezha.jpg"
+                muted
+                loop
+                playsinline
+                preload="metadata"
+              ></video>
+              <span>播放预览</span>
+            </button>
+            <div class="work-detail-copy">
+              <small data-work-category>神话 / 角色动态</small>
+              <h3 data-work-title>《哪吒》动态短片</h3>
+              <p data-work-copy>东方神话角色动态短片，强调角色能量、镜头推进和神话视觉冲击。</p>
+              <button class="pill primary" type="button" data-open-work>播放视频</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="statement-screen" id="strengths">
+        <div class="section-head reveal-item">
+          <p class="kicker">CORE STRENGTHS</p>
+          <h2>个人优势</h2>
+        </div>
+
+        <div class="strength-grid">
+          <article class="strength-card reveal-item">
+            <small>01</small>
+            <h3>完整项目主导能力</h3>
+            <span></span>
+          </article>
+          <article class="strength-card lime reveal-item">
+            <small>02</small>
+            <h3>品牌视觉体系搭建</h3>
+            <p>品牌识别系统梳理 / 视觉规范与图像风格</p>
+          </article>
+          <article class="strength-card reveal-item">
+            <small>03</small>
+            <h3>AI 设计提效</h3>
+            <span></span>
+          </article>
+          <article class="strength-card reveal-item">
+            <small>04</small>
+            <h3>设计管理统筹</h3>
+            <span></span>
+          </article>
+          <article class="strength-card reveal-item">
+            <small>05</small>
+            <h3>跨部门协同</h3>
+            <span></span>
+          </article>
+        </div>
+      </section>
+
+      <section class="visual-screen">
+        <div class="section-head reveal-item">
+          <p class="kicker">VISUAL DEVELOPMENT</p>
+          <h2>设定图集</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-card reveal-item" type="button" data-gallery="golden">
+            <img src="assets/settings/golden-character.jpg" alt="《金色》人物设定" loading="lazy" />
+            <span>《金色》视觉设定</span>
+          </button>
+          <button class="gallery-card reveal-item" type="button" data-gallery="monks">
+            <img src="assets/settings/monks-scene.jpg" alt="《小道士与小和尚》场景设定" loading="lazy" />
+            <span>小道士与小和尚</span>
+          </button>
+          <button class="gallery-card reveal-item" type="button" data-gallery="cyber">
+            <img src="assets/settings/cyber-scene.jpg" alt="赛博废土场景设定" loading="lazy" />
+            <span>赛博废土机能风</span>
+          </button>
+          <button class="gallery-card reveal-item" type="button" data-gallery="youyou">
+            <img src="assets/settings/youyou-character.jpg" alt="《悠悠我心》人物设定" loading="lazy" />
+            <span>《悠悠我心》</span>
+          </button>
+          <button class="gallery-card reveal-item" type="button" data-gallery="wedding">
+            <img src="assets/settings/wedding-scene.jpg" alt="《结婚》婚房场景设定" loading="lazy" />
+            <span>婚礼空间氛围</span>
+          </button>
+          <button class="gallery-card reveal-item" type="button" data-gallery="girl">
+            <img src="assets/settings/girl-character.jpg" alt="《丫头也好命》人物设定" loading="lazy" />
+            <span>丫头也好命</span>
+          </button>
+          <button class="gallery-card reveal-item" type="button" data-gallery="golden">
+            <img src="assets/settings/golden-world.jpg" alt="《金色》仙界场景设定" loading="lazy" />
+            <span>仙界世界观</span>
+          </button>
+          <button class="gallery-card reveal-item" type="button" data-gallery="cyber">
+            <img src="assets/settings/cyber-engineer.jpg" alt="赛博废土工程师人物设定" loading="lazy" />
+            <span>机能角色设定</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="contact-screen" id="contact">
+        <div class="contact-card reveal-item">
+          <p class="kicker">CONTACT</p>
+          <h2>一起做有记忆点的 AI 影像</h2>
           <div>
-            <p class="eyebrow">WORKFLOW</p>
-            <h2 id="workflow-title">AI 漫剧创作方法</h2>
-          </div>
-          <p class="section-intro">
-            从剧本和人物出发，用 AI 辅助设计建立一致的视觉世界，再将关键镜头推进到动态成片。
-          </p>
-        </div>
-        <div class="method-grid">
-          <article><span>01</span><h3>角色设定</h3><p>角色外形、服装与表情的一致性控制。</p></article>
-          <article><span>02</span><h3>场景气氛</h3><p>以光影和美术风格建立故事的情绪。</p></article>
-          <article><span>03</span><h3>分镜设计</h3><p>把叙事节奏转换为可生成的镜头语言。</p></article>
-          <article><span>04</span><h3>动态成片</h3><p>整合视频生成、节奏编排与视觉校验。</p></article>
-        </div>
-      </section>
-
-      <section class="design section" id="design" aria-labelledby="design-title">
-        <div class="section-heading centered">
-          <p class="eyebrow">AI DRAMA VISUAL DEVELOPMENT</p>
-          <h2 id="design-title">人物设定 · 场景 · 道具</h2>
-          <p class="section-note">从角色定妆到世界观场景与关键道具，呈现 AI 漫剧创作中的视觉开发</p>
-        </div>
-        <div class="design-grid">
-          <button class="design-card" type="button" data-gallery="golden">
-            <img src="assets/settings/golden-character.jpg" alt="金色项目二郎神人物三视图设定" loading="lazy" />
-            <span class="design-meta"><small>角色 / 世界观 / 道具</small><strong>《金色》</strong><em>查看设定图集 · 03</em></span>
-          </button>
-          <button class="design-card" type="button" data-gallery="monks">
-            <img src="assets/settings/monks-scene.jpg" alt="小道士与小和尚古镇场景设定" loading="lazy" />
-            <span class="design-meta"><small>人物 / 场景 / 道具</small><strong>《小道士与小和尚》</strong><em>查看设定图集 · 03</em></span>
-          </button>
-          <button class="design-card" type="button" data-gallery="cyber">
-            <img src="assets/settings/cyber-scene.jpg" alt="赛博废土机能风城市废墟场景设定" loading="lazy" />
-            <span class="design-meta"><small>角色 / 废土场景</small><strong>《赛博废土机能风》</strong><em>查看设定图集 · 03</em></span>
-          </button>
-          <button class="design-card" type="button" data-gallery="youyou">
-            <img src="assets/settings/youyou-character.jpg" alt="悠悠我心女主角人物设定" loading="lazy" />
-            <span class="design-meta"><small>角色定妆 / 关系设定</small><strong>《悠悠我心》</strong><em>查看设定图集 · 03</em></span>
-          </button>
-          <button class="design-card" type="button" data-gallery="wedding">
-            <img src="assets/settings/wedding-character.jpg" alt="结婚项目新娘人物设定" loading="lazy" />
-            <span class="design-meta"><small>角色 / 婚礼空间</small><strong>《结婚》</strong><em>查看设定图集 · 03</em></span>
-          </button>
-          <button class="design-card" type="button" data-gallery="girl">
-            <img src="assets/settings/girl-character.jpg" alt="丫头也好命人物场景设定" loading="lazy" />
-            <span class="design-meta"><small>人物 / 村落场景</small><strong>《丫头也好命》</strong><em>查看设定图集 · 03</em></span>
-          </button>
-        </div>
-      </section>
-
-      <section class="resume section" id="resume" aria-labelledby="resume-title">
-        <div class="section-heading split-heading">
-          <div>
-            <p class="eyebrow">EXPERIENCE</p>
-            <h2 id="resume-title">经历与能力</h2>
-          </div>
-          <a class="text-link" href="assets/zhang-jianan-aigc-resume.pdf" target="_blank">下载完整简历 ↗</a>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item current">
-            <time>2026.03 - 2026.05</time>
-            <div><h3>巧匠 AI 漫剧创作营 · 1期</h3><p>AI 视觉设计师 / 核心共创，在训至 2026 年 5 月 28 日。主导角色设定、场景绘制与高保真分镜生成。</p></div>
-          </article>
-          <article class="timeline-item">
-            <time>2020.08 - 2026.02</time>
-            <div><h3>自由职业 / 独立 UI 设计师</h3><p>承接 Web 官网、App UI、电商视觉与品牌升级项目，并研究 AI 工作流商业落地。</p></div>
-          </article>
-          <article class="timeline-item">
-            <time>2019.07 - 2020.08</time>
-            <div><h3>北京致青春商贸有限公司</h3><p>资深美工 / UI 设计师，主导店铺视觉规范、专题页及详情页设计。</p></div>
-          </article>
-          <article class="timeline-item">
-            <time>2015.06 - 2019.04</time>
-            <div><h3>UI / 视觉设计经历</h3><p>曾任职民众体检、搜窗网络科技与多利宝，覆盖官网、H5、小程序与移动端产品设计。</p></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="contact section" id="contact" aria-labelledby="contact-title">
-        <div class="contact-panel">
-          <p class="eyebrow">FOLLOW & CONTACT</p>
-          <h2 id="contact-title">关注我的 AI 漫剧创作</h2>
-          <p class="contact-copy">项目合作、作品交流或关注账号对接，可通过邮箱和电话联系我。</p>
-          <div class="contact-links">
-            <a href="mailto:563090126@qq.com">563090126@qq.com</a>
-            <a href="tel:18500419419">185-0041-9419</a>
-          </div>
-          <div class="social-qr-grid" aria-label="关注账号二维码">
-            <a class="qr-card" href="assets/contact-douyin-qr.jpg" target="_blank" rel="noopener">
-              <img src="assets/contact-douyin-qr.jpg" alt="抖音二维码，账号 Wo·沃沃" loading="lazy" />
-              <strong>抖音</strong>
-              <span>@Wo·沃沃 · 抖音号 70200677</span>
-              <small>扫码或点击查看大图</small>
-            </a>
-            <a class="qr-card" href="assets/contact-wechat-qr.jpg" target="_blank" rel="noopener">
-              <img src="assets/contact-wechat-qr.jpg" alt="微信二维码，昵称腰果" loading="lazy" />
-              <strong>微信</strong>
-              <span>腰果 · 辽宁 沈阳</span>
-              <small>扫码添加好友</small>
-            </a>
+            <a class="pill primary" href="mailto:563090126@qq.com">563090126@qq.com</a>
+            <a class="pill ghost" href="tel:18500419419">185-0041-9419</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="footer">
       <strong>JIANAN.</strong>
-      <span>张佳楠 · AI 漫剧设计师 · 北京</span>
-      <span>© <span id="year"></span> All rights reserved.</span>
+      <span>张佳楠 / AI 漫剧视觉设计 / <span id="year"></span></span>
     </footer>
 
     <div class="video-modal" data-video-modal hidden>
       <div class="modal-backdrop" data-close-video></div>
       <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="video-title">
         <div class="modal-head">
-          <h2 id="video-title" data-video-title>视频作品</h2>
+          <div>
+            <p class="kicker">SELECTED WORK</p>
+            <h2 id="video-title" data-video-title>视频作品</h2>
+          </div>
           <button class="close-button" type="button" data-close-video aria-label="关闭视频">关闭</button>
         </div>
         <video class="video-player" data-video-player controls playsinline preload="metadata"></video>
       </section>
     </div>
+
     <div class="gallery-modal" data-gallery-modal hidden>
       <div class="modal-backdrop" data-close-gallery></div>
       <section class="gallery-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
         <div class="modal-head">
-          <div class="gallery-heading">
-            <p>VISUAL DEVELOPMENT</p>
+          <div>
+            <p class="kicker">VISUAL DEVELOPMENT</p>
             <h2 id="gallery-title" data-gallery-title>设定图集</h2>
           </div>
           <button class="close-button" type="button" data-close-gallery aria-label="关闭图集">关闭</button>
@@ -332,13 +324,14 @@
           <figcaption data-gallery-caption></figcaption>
         </figure>
         <div class="gallery-controls">
-          <button class="gallery-nav" type="button" data-gallery-prev>上一张</button>
+          <button type="button" data-gallery-prev>上一张</button>
           <span data-gallery-position>01 / 03</span>
-          <button class="gallery-nav" type="button" data-gallery-next>下一张</button>
+          <button type="button" data-gallery-next>下一张</button>
         </div>
         <div class="gallery-thumbs" data-gallery-thumbs aria-label="图集缩略图"></div>
       </section>
     </div>
-    <script src="script.js?v=20260527-qr-equal"></script>
+
+    <script src="portfolio-dark.js?v=20260626-github-live-1"></script>
   </body>
 </html>

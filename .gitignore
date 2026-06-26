@@ -20,6 +20,8 @@ assets/modules/*
 !assets/poster-project-nezha.jpg
 !assets/poster-project-chair.jpg
 !assets/poster-project-liveaction.jpg
+!assets/poster-project-cps-six-wheel.png
+!assets/poster-project-dragon-baby.png
 !assets/settings/
 assets/settings/*
 !assets/settings/golden-character.jpg
@@ -48,6 +50,13 @@ assets/videos/*
 !assets/videos/project-nezha.mp4
 !assets/videos/project-chair.mp4
 !assets/videos/project-liveaction.mp4
+!assets/videos/cps-six-wheel-roller-kit-web.mp4
+!assets/videos/dragon-baby-1111.mp4
 
 .vercel/
 .media-tools/
+16x9分镜图/
+16x9分镜图_人物场景替换/
+fjt-16x9.png
+make_fjt_16x9.ps1
+make_fjt_person_scene_16x9.ps1
