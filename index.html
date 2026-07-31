@@ -15,14 +15,26 @@
     />
     <meta
       property="og:image"
-      content="https://jiananzhang46-jpg.github.io/zhang-jianan-ai-portfolio/assets/red-portfolio/game-inventory-poster.jpg"
+      content="https://jiananzhang46-jpg.github.io/zhang-jianan-ai-portfolio/assets/portfolio-series/social-preview.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="张佳楠｜AI 漫剧视觉作品集" />
+    <meta
+      name="twitter:description"
+      content="六部 AI 漫剧代表作，以及从剧本、资产、分镜到成片的完整制作系统。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://jiananzhang46-jpg.github.io/zhang-jianan-ai-portfolio/assets/portfolio-series/social-preview.png"
     />
     <title>张佳楠｜AI Drama Director & Visual Designer</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="portfolio-dark.css?v=20260731-six-series" />
+    <link rel="stylesheet" href="portfolio-dark.css?v=20260731-interactive" />
   </head>
   <body>
+    <a class="skip-link" href="#about">跳到主要内容</a>
     <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="pointer-glow" aria-hidden="true"></div>
 
     <header class="topbar" data-header>
       <a class="logo" href="#top" aria-label="返回首页">
@@ -42,6 +54,7 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-orbit" aria-hidden="true"></div>
         <div class="hero-gallery" aria-hidden="true">
           <figure class="hero-image is-active" data-hero-image="0">
             <img src="assets/portfolio-series/wutong-poster.jpg" alt="" />
@@ -68,10 +81,16 @@
                 <strong>AI 漫剧导演 / AIGC 视觉设计师</strong><br />
                 <span>10 年以上视觉设计经验，专注 AI 漫剧全流程创作。</span>
               </p>
-              <a class="round-cta" href="#works">
-                <span>VIEW<br />PROJECTS</span>
-                <b>↓</b>
-              </a>
+              <div class="hero-actions">
+                <button class="hero-play" type="button" data-hero-play data-magnetic>
+                  <span>播放当前精选</span>
+                  <b>▶</b>
+                </button>
+                <a class="round-cta" href="#works" data-magnetic>
+                  <span>VIEW<br />PROJECTS</span>
+                  <b>↓</b>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -95,6 +114,7 @@
         <div class="hero-footer">
           <span>10+ 年视觉设计经验 · AI 漫剧全流程</span>
           <span data-hero-caption>6 部重点作品 / 1000+ 项制作文件</span>
+          <span class="scroll-hint">SCROLL <i></i></span>
         </div>
       </section>
 
@@ -142,11 +162,23 @@
             <span>01</span>
             <p>SELECTED WORKS / 2026</p>
           </div>
-          <h2 id="works-title">六部作品，<br /><span>六种叙事世界。</span></h2>
+          <div class="projects-heading">
+            <h2 id="works-title">六部作品，<br /><span>六种叙事世界。</span></h2>
+            <div class="project-toolbar">
+              <div class="project-filters" role="group" aria-label="按作品类型筛选">
+                <button class="is-active" type="button" data-project-filter="all" aria-pressed="true">全部</button>
+                <button type="button" data-project-filter="emotion" aria-pressed="false">情感</button>
+                <button type="button" data-project-filter="suspense" aria-pressed="false">悬疑</button>
+                <button type="button" data-project-filter="fantasy" aria-pressed="false">奇幻</button>
+              </div>
+              <p data-filter-status aria-live="polite">正在展示 6 部作品</p>
+            </div>
+          </div>
         </header>
 
         <div class="series-grid section-shell">
-          <article class="series-card reveal">
+          <article class="series-card reveal" data-project-card data-category="emotion">
+            <span class="series-index" aria-hidden="true">01</span>
             <button class="series-media" type="button" data-play-project="wutong" aria-label="播放《错将真心落梧桐》">
               <img src="assets/portfolio-series/wutong-poster.jpg" alt="《错将真心落梧桐》成片画面" loading="lazy" />
               <span class="series-play"><b>▶</b> 播放代表成片</span>
@@ -156,7 +188,8 @@
             <p>以家庭关系与错位真心为核心的连续情感漫剧，强调年代质感、角色一致性与细腻表演。</p>
           </article>
 
-          <article class="series-card reveal">
+          <article class="series-card reveal" data-project-card data-category="fantasy">
+            <span class="series-index" aria-hidden="true">02</span>
             <button class="series-media" type="button" data-play-project="dragon" aria-label="播放《天降龙宝》">
               <img src="assets/portfolio-series/dragon-poster.jpg" alt="《天降龙宝》成片画面" loading="lazy" />
               <span class="series-play"><b>▶</b> 播放代表成片</span>
@@ -166,7 +199,8 @@
             <p>从海鲜市场到海岛奇遇，以龙宝设定推进亲情与逆袭线，覆盖有声版及无 BGM 交付版本。</p>
           </article>
 
-          <article class="series-card reveal">
+          <article class="series-card reveal" data-project-card data-category="emotion">
+            <span class="series-index" aria-hidden="true">03</span>
             <button class="series-media" type="button" data-play-project="heiress" aria-label="播放《团宠假千金杀疯京圈》">
               <img src="assets/portfolio-series/heiress-poster.jpg" alt="《团宠假千金杀疯京圈》成片画面" loading="lazy" />
               <span class="series-play"><b>▶</b> 播放代表成片</span>
@@ -176,7 +210,8 @@
             <p>女主进入黑市与豪门世界，在身份反转和高密度冲突中建立鲜明、强势的爽剧节奏。</p>
           </article>
 
-          <article class="series-card reveal">
+          <article class="series-card reveal" data-project-card data-category="suspense">
+            <span class="series-index" aria-hidden="true">04</span>
             <button class="series-media" type="button" data-play-project="breakingDoor" aria-label="播放《破门》">
               <img src="assets/portfolio-series/breaking-door-poster.jpg" alt="《破门》成片画面" loading="lazy" />
               <span class="series-play"><b>▶</b> 播放代表成片</span>
@@ -186,7 +221,8 @@
             <p>围绕家庭危机与强冲突事件展开，在写实人物、压迫空间和快速剪辑中制造悬念。</p>
           </article>
 
-          <article class="series-card reveal">
+          <article class="series-card reveal" data-project-card data-category="suspense">
+            <span class="series-index" aria-hidden="true">05</span>
             <button class="series-media" type="button" data-play-project="undercover" aria-label="播放《重回深渊：卧底女王》">
               <img src="assets/portfolio-series/undercover-poster.jpg" alt="《重回深渊：卧底女王》成片画面" loading="lazy" />
               <span class="series-play"><b>▶</b> 播放代表成片</span>
@@ -196,7 +232,8 @@
             <p>以女性卧底为叙事核心，构建高压环境、危险人物关系与持续升级的犯罪悬疑氛围。</p>
           </article>
 
-          <article class="series-card series-card-game reveal">
+          <article class="series-card series-card-game reveal" data-project-card data-category="fantasy">
+            <span class="series-index" aria-hidden="true">06</span>
             <button class="series-media" type="button" data-play-project="game" aria-label="播放《高考落榜后，我把游戏物资带回现实》">
               <img src="assets/red-portfolio/game-inventory-poster.jpg" alt="《高考落榜后，我把游戏物资带回现实》成片画面" loading="lazy" />
               <span class="series-play"><b>▶</b> 播放 38—40 集高光</span>
@@ -220,12 +257,23 @@
           </div>
         </header>
 
-        <div class="pipeline-steps reveal" aria-label="制作流程">
-          <span>01 STORY</span><i>→</i>
-          <span>02 ASSETS</span><i>→</i>
-          <span>03 STORYBOARD</span><i>→</i>
-          <span>04 MOTION</span><i>→</i>
-          <span>05 FINAL CUT</span>
+        <div class="pipeline-console reveal">
+          <div class="pipeline-steps" role="tablist" aria-label="制作流程">
+            <button class="is-active" type="button" role="tab" data-pipeline-step="0" aria-selected="true" aria-controls="pipeline-detail">01 STORY</button>
+            <i>→</i>
+            <button type="button" role="tab" data-pipeline-step="1" aria-selected="false" aria-controls="pipeline-detail">02 ASSETS</button>
+            <i>→</i>
+            <button type="button" role="tab" data-pipeline-step="2" aria-selected="false" aria-controls="pipeline-detail">03 STORYBOARD</button>
+            <i>→</i>
+            <button type="button" role="tab" data-pipeline-step="3" aria-selected="false" aria-controls="pipeline-detail">04 MOTION</button>
+            <i>→</i>
+            <button type="button" role="tab" data-pipeline-step="4" aria-selected="false" aria-controls="pipeline-detail">05 FINAL CUT</button>
+          </div>
+          <div class="pipeline-focus" id="pipeline-detail" role="tabpanel" tabindex="0" aria-live="polite">
+            <span data-pipeline-number>01</span>
+            <strong data-pipeline-title>剧本拆解与视觉定调</strong>
+            <p data-pipeline-copy>先梳理人物关系、情绪转折与高光节点，让每个镜头都有明确叙事任务。</p>
+          </div>
         </div>
 
         <div class="asset-grid">
@@ -311,6 +359,11 @@
       <span>© <b data-year></b></span>
     </footer>
 
+    <button class="back-to-top" type="button" data-back-to-top aria-label="返回页面顶部">
+      <span>↑</span>
+      <small>TOP</small>
+    </button>
+
     <div class="video-modal" data-video-modal hidden>
       <div class="modal-backdrop" data-close-video></div>
       <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -319,14 +372,22 @@
             <p>NOW PLAYING</p>
             <h2 id="modal-title" data-modal-title>项目视频</h2>
           </div>
-          <button type="button" data-close-video aria-label="关闭视频">CLOSE ×</button>
+          <div class="modal-tools">
+            <span data-modal-count>01 / 06</span>
+            <button type="button" data-close-video aria-label="关闭视频">CLOSE ×</button>
+          </div>
         </header>
         <div class="modal-stage" data-modal-stage>
           <video controls playsinline preload="metadata" data-modal-video></video>
         </div>
+        <footer class="modal-nav">
+          <button type="button" data-video-prev><span>←</span> 上一部</button>
+          <p>ESC 关闭 · ← → 切换作品</p>
+          <button type="button" data-video-next>下一部 <span>→</span></button>
+        </footer>
       </section>
     </div>
 
-    <script src="portfolio-dark.js?v=20260731-six-series"></script>
+    <script src="portfolio-dark.js?v=20260731-interactive"></script>
   </body>
 </html>
