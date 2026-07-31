@@ -21,6 +21,10 @@ html {
   background: var(--black);
 }
 
+[id] {
+  scroll-margin-top: 76px;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -294,6 +298,24 @@ video {
 .hero h1 em {
   color: var(--red);
   font-style: normal;
+}
+
+.hero-name span:first-child {
+  margin-bottom: 22px;
+  color: white;
+  font-size: 0.34em;
+  line-height: 1;
+  letter-spacing: 0.18em;
+}
+
+.hero-role strong {
+  color: white;
+  font-size: 1.08em;
+  font-weight: 700;
+}
+
+.hero-role span {
+  color: rgba(241, 237, 231, 0.56);
 }
 
 .hero-intro {
@@ -1238,6 +1260,11 @@ video {
     font-size: clamp(56px, 14vw, 90px);
   }
 
+  .hero-name span:first-child {
+    margin-bottom: 16px;
+    font-size: 0.42em;
+  }
+
   .hero h1 span:nth-child(2),
   .hero-intro {
     margin-left: 0;
@@ -1272,6 +1299,12 @@ video {
   .pipeline-head > div:last-child,
   .about-main {
     margin-top: 24px;
+  }
+
+  .manifesto {
+    min-height: calc(100svh - 64px);
+    align-content: center;
+    scroll-margin-top: 64px;
   }
 
   .manifesto-detail dl {
@@ -1340,6 +1373,11 @@ video {
     line-height: 0.88;
   }
 
+  .hero-name span:first-child {
+    font-size: 0.46em;
+    letter-spacing: 0.12em;
+  }
+
   .hero h1 span:nth-child(2) {
     -webkit-text-stroke-width: 0.7px;
   }
@@ -1361,7 +1399,10 @@ video {
   }
 
   .manifesto h2 {
-    font-size: 39px;
+    max-width: 100%;
+    font-size: clamp(34px, 10vw, 44px);
+    line-height: 1.16;
+    overflow-wrap: anywhere;
   }
 
   .manifesto-detail {
@@ -1436,6 +1477,13 @@ video {
 
   .capability-list > div {
     grid-template-columns: 34px 1fr;
+  }
+
+  .about-title h2 {
+    max-width: calc(100vw - 36px);
+    font-size: clamp(34px, 10.2vw, 48px);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
   }
 
   .capability-list small {

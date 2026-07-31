@@ -37,9 +37,9 @@ const projects = {
 };
 
 const heroCaptions = [
-  "REALISTIC FAMILY DRAMA / 44 EPISODES",
-  "FPS FANTASY DRAMA / EP.38—40 HIGHLIGHT",
-  "URBAN FANTASY CONCEPT / VERTICAL FILM",
+  "《千万家产试真情》/ 44 集现实情感漫剧",
+  "《游戏物资带回现实》/ 第 38—40 集高光",
+  "《天降龙宝》/ 都市幻想竖屏短片",
 ];
 
 let activeHero = 0;
