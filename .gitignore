@@ -1,5 +1,25 @@
 # Keep design source assets local; publish only files referenced by the website.
 assets/*
+!assets/portfolio-series/
+assets/portfolio-series/*
+!assets/portfolio-series/wutong.mp4
+!assets/portfolio-series/wutong-poster.jpg
+!assets/portfolio-series/wutong-character.jpg
+!assets/portfolio-series/dragon.mp4
+!assets/portfolio-series/dragon-poster.jpg
+!assets/portfolio-series/dragon-character.jpg
+!assets/portfolio-series/dragon-scene.jpg
+!assets/portfolio-series/heiress.mp4
+!assets/portfolio-series/heiress-poster.jpg
+!assets/portfolio-series/heiress-character.jpg
+!assets/portfolio-series/breaking-door.mp4
+!assets/portfolio-series/breaking-door-poster.jpg
+!assets/portfolio-series/breaking-character.jpg
+!assets/portfolio-series/undercover.mp4
+!assets/portfolio-series/undercover-poster.jpg
+!assets/portfolio-series/undercover-cast.jpg
+!assets/portfolio-series/game-character.jpg
+!assets/portfolio-series/game-blocking.jpg
 !assets/about-moonlit-landscape.jpg
 !assets/about-silver-tree-landscape.jpg
 !assets/about-story-showcase-wide.jpg

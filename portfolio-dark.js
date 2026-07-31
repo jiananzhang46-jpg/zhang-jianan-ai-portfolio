@@ -16,10 +16,34 @@ const closeButtons = [...document.querySelectorAll("[data-close-video]")];
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const projects = {
-  wealth: {
-    title: "《千万家产试真情》",
-    src: "assets/red-portfolio/million-estate.mp4",
-    poster: "assets/red-portfolio/million-estate-poster.jpg",
+  wutong: {
+    title: "《错将真心落梧桐》",
+    src: "assets/portfolio-series/wutong.mp4",
+    poster: "assets/portfolio-series/wutong-poster.jpg",
+    portrait: true,
+  },
+  dragon: {
+    title: "《天降龙宝》",
+    src: "assets/portfolio-series/dragon.mp4",
+    poster: "assets/portfolio-series/dragon-poster.jpg",
+    portrait: true,
+  },
+  heiress: {
+    title: "《团宠假千金杀疯京圈》",
+    src: "assets/portfolio-series/heiress.mp4",
+    poster: "assets/portfolio-series/heiress-poster.jpg",
+    portrait: true,
+  },
+  breakingDoor: {
+    title: "《破门》",
+    src: "assets/portfolio-series/breaking-door.mp4",
+    poster: "assets/portfolio-series/breaking-door-poster.jpg",
+    portrait: true,
+  },
+  undercover: {
+    title: "《重回深渊：卧底女王》",
+    src: "assets/portfolio-series/undercover.mp4",
+    poster: "assets/portfolio-series/undercover-poster.jpg",
     portrait: true,
   },
   game: {
@@ -28,18 +52,12 @@ const projects = {
     poster: "assets/red-portfolio/game-inventory-poster.jpg",
     portrait: false,
   },
-  dragon: {
-    title: "《分手后，天降龙宝带我制霸四海》概念短片",
-    src: "assets/red-portfolio/dragon-baby.mp4",
-    poster: "assets/red-portfolio/dragon-baby-poster.jpg",
-    portrait: true,
-  },
 };
 
 const heroCaptions = [
-  "《千万家产试真情》/ 44 集现实情感漫剧",
+  "《错将真心落梧桐》/ 年代情感连续漫剧",
+  "《重回深渊：卧底女王》/ 犯罪悬疑女主剧",
   "《游戏物资带回现实》/ 第 38—40 集高光",
-  "《天降龙宝》/ 都市幻想竖屏短片",
 ];
 
 let activeHero = 0;
