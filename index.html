@@ -5,412 +5,359 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="张佳楠个人作品集，展示 AI 漫剧、AIGC 视觉设定、动态短片、分镜方法与作品案例。"
+      content="张佳楠个人作品集——AI 漫剧导演、AIGC 视觉设计与全流程影像制作。"
     />
-    <title>张佳楠 | JIANAN Portfolio</title>
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:title" content="张佳楠｜AI 漫剧视觉作品集" />
+    <meta
+      property="og:description"
+      content="从剧本拆解、角色与场景资产，到分镜、生成和成片的一体化 AI 影像工作流。"
+    />
+    <meta
+      property="og:image"
+      content="https://jiananzhang46-jpg.github.io/zhang-jianan-ai-portfolio/assets/red-portfolio/game-inventory-poster.jpg"
+    />
+    <title>张佳楠｜AI Drama Director & Visual Designer</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="portfolio-dark.css?v=20260731-game-case" />
+    <link rel="stylesheet" href="portfolio-dark.css?v=20260731-redesign" />
   </head>
   <body>
-    <div class="cursor-glow" aria-hidden="true"></div>
     <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="critter-layer" aria-hidden="true"></div>
+
     <header class="topbar" data-header>
-      <a class="logo" href="#top" aria-label="回到首页">
-        <span>J</span>
-        <strong>JIANAN</strong>
+      <a class="logo" href="#top" aria-label="返回首页">
+        <span>J/N</span>
+        <strong>JIANAN STUDIO</strong>
       </a>
-      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">菜单</button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        MENU
+      </button>
       <nav class="nav" id="site-nav" aria-label="主导航">
-        <a href="#works">工作经历</a>
-        <a href="#visuals">精选作品</a>
-        <a href="#game-inventory">项目全案</a>
-        <a href="#strengths">个人优势</a>
+        <a href="#works">代表作品</a>
+        <a href="#pipeline">制作系统</a>
+        <a href="#about">关于我</a>
       </nav>
-      <a class="top-cta" href="#contact">联系我</a>
+      <a class="header-contact" href="#contact">LET’S TALK <span>↗</span></a>
     </header>
 
     <main id="top">
-      <section class="hero-screen" data-hero>
-        <canvas class="ambient-canvas" data-motion-canvas aria-hidden="true"></canvas>
-        <img class="hero-bg" src="assets/hero-moonlit-clouds.jpg" alt="" aria-hidden="true" />
-
-        <div class="hero-title">
-          <p class="kicker">用视觉系统与 AI 工作流</p>
-          <h1>
-            <span>JIANAN</span>
-            PORTFOLIO
-          </h1>
-          <p>让品牌内容更快、更准、更有辨识度</p>
-          <div class="hero-actions">
-            <a class="pill primary" href="#visuals">查看作品</a>
-            <button class="pill ghost" type="button" data-play-current>播放当前作品</button>
-          </div>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-gallery" aria-hidden="true">
+          <figure class="hero-image is-active" data-hero-image="0">
+            <img src="assets/red-portfolio/million-estate-poster.jpg" alt="" />
+          </figure>
+          <figure class="hero-image" data-hero-image="1">
+            <img src="assets/red-portfolio/game-inventory-poster.jpg" alt="" />
+          </figure>
+          <figure class="hero-image" data-hero-image="2">
+            <img src="assets/red-portfolio/dragon-baby-poster.jpg" alt="" />
+          </figure>
+          <div class="hero-shade"></div>
         </div>
 
-        <aside class="hero-meta" data-tilt-card aria-label="当前精选作品">
-          <small data-active-index>01 / 05</small>
-          <h2 data-active-title>《哪吒》动态短片</h2>
-          <p data-active-copy>东方神话角色动态短片，强调角色能量、镜头推进和神话视觉冲击。</p>
-          <img data-hero-image src="assets/poster-project-nezha.jpg" alt="《哪吒》动态短片海报" />
-        </aside>
-
-        <div class="poster-strip" data-poster-strip aria-label="精选作品轮播">
-          <button class="poster-card is-active" type="button" data-project-button="0" aria-pressed="true">
-            <img src="assets/poster-project-nezha.jpg" alt="" />
-            <span>角色动态</span>
-          </button>
-          <button class="poster-card" type="button" data-project-button="1" aria-pressed="false">
-            <img src="assets/poster-project-daji.jpg" alt="" />
-            <span>国风幻想</span>
-          </button>
-          <button class="poster-card" type="button" data-project-button="2" aria-pressed="false">
-            <img src="assets/poster-project-pets.jpg" alt="" />
-            <span>萌宠剧情</span>
-          </button>
-          <button class="poster-card" type="button" data-project-button="3" aria-pressed="false">
-            <img src="assets/poster-project-chair.jpg" alt="" />
-            <span>产品视觉</span>
-          </button>
-          <button class="poster-card" type="button" data-project-button="4" aria-pressed="false">
-            <img src="assets/poster-project-liveaction.jpg" alt="" />
-            <span>真人短片</span>
-          </button>
-        </div>
-      </section>
-
-      <section class="about-screen" id="works">
-        <div class="about-shell reveal-item">
-          <div class="portrait-card">
-            <img src="assets/about-moonlit-landscape.jpg" alt="张佳楠 AI 视觉月夜山水作品展示" loading="lazy" />
-            <a href="assets/zhang-jianan-aigc-resume.pdf" target="_blank" rel="noreferrer">PDF 简历</a>
-          </div>
-
-          <div class="about-copy">
-            <p class="kicker">WORK EXPERIENCE</p>
-            <h2>Hi, I am Zhang Jianan!</h2>
-            <p>
-              我是张佳楠，拥有 10 年以上 UI/UX、品牌视觉、电商视觉与网页设计经验。现在专注 AI 漫剧创作，把设计审美、商业理解和 AIGC 工作流结合起来，形成稳定、可复用、可落地的视觉表达。
-            </p>
-            <div class="info-grid">
-              <dl>
-                <dt>当前职位</dt>
-                <dd>AI Visual Designer</dd>
-              </dl>
-              <dl>
-                <dt>专长方向</dt>
-                <dd>Brand / 3D / AIGC</dd>
-              </dl>
-              <dl>
-                <dt>手机</dt>
-                <dd>185-0041-9419</dd>
-              </dl>
-              <dl>
-                <dt>邮箱</dt>
-                <dd>563090126@qq.com</dd>
-              </dl>
-            </div>
-            <div class="stats-row">
-              <article><strong>10+</strong><span>年视觉设计</span></article>
-              <article><strong>30+</strong><span>完整项目经验</span></article>
-              <article><strong>500+</strong><span>AI 视觉资产</span></article>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline reveal-item" aria-label="工作经历时间线">
-          <article>
-            <span>2024.04 - 至今</span>
-            <h3>未来影像科技有限公司</h3>
-            <p>AIGC 视觉设计 / AI 漫剧工作流搭建</p>
-          </article>
-          <article>
-            <span>2020.09 - 2025.03</span>
-            <h3>星火智能科技有限公司</h3>
-            <p>品牌视觉、UI/UX、活动主视觉与设计管理</p>
-          </article>
-          <article>
-            <span>2018.07 - 2020.08</span>
-            <h3>云象互动科技有限公司</h3>
-            <p>电商视觉、网页设计、产品内容包装</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="works-screen" id="visuals">
-        <div class="section-head reveal-item">
-          <p class="kicker">SELECTED WORKS</p>
-          <h2>视觉作品</h2>
-        </div>
-
-        <div class="work-showcase reveal-item">
-          <div class="work-collage" aria-label="作品拼贴">
-            <div class="work-group portrait-row" aria-label="竖版视频">
-              <button class="collage-tile portrait is-active" type="button" data-work-select="0" aria-pressed="true">
-                <img src="assets/poster-project-nezha.jpg" alt="《哪吒》动态短片" loading="lazy" />
-                <span>角色与潮流</span>
-              </button>
-              <button class="collage-tile portrait" type="button" data-work-select="2" aria-pressed="false">
-                <img src="assets/poster-project-pets.jpg" alt="《猫狗》剧情片段" loading="lazy" />
-                <span>剧情短片</span>
-              </button>
-              <button class="collage-tile portrait" type="button" data-work-select="4" aria-pressed="false">
-                <img src="assets/poster-project-liveaction.jpg" alt="《真人短片》剧情片段" loading="lazy" />
-                <span>真人叙事</span>
-              </button>
-              <button class="collage-tile portrait" type="button" data-work-select="6" aria-pressed="false">
-                <img src="assets/poster-project-dragon-baby.png" alt="《天降龙宝》剧情片段" loading="lazy" />
-                <span>龙宝短剧</span>
-              </button>
-            </div>
-            <div class="work-group landscape-stack" aria-label="横版视频">
-              <button class="collage-tile landscape" type="button" data-work-select="1" aria-pressed="false">
-                <img src="assets/poster-project-daji.jpg" alt="《妲己》画面片段" loading="lazy" />
-                <span>东方幻想</span>
-              </button>
-              <button class="collage-tile landscape" type="button" data-work-select="3" aria-pressed="false">
-                <img src="assets/poster-project-chair.jpg" alt="《椅子》产品短片" loading="lazy" />
-                <span>产品视觉</span>
-              </button>
-              <button class="collage-tile landscape" type="button" data-work-select="5" aria-pressed="false">
-                <img src="assets/poster-project-cps-six-wheel.png" alt="《CPS 六轮滚轮仪》产品视频" loading="lazy" />
-                <span>CPS 产品</span>
-              </button>
-              <button class="collage-tile landscape" type="button" data-work-select="7" aria-pressed="false">
-                <img src="assets/poster-project-game-inventory.jpg" alt="《高考落榜后，我把游戏物资带回现实》高光片段" loading="lazy" />
-                <span>游戏物资漫剧</span>
-              </button>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span> AI DRAMA · VISUAL DIRECTION · 2026</p>
+            <h1 id="hero-title">
+              <span>STORIES</span>
+              <span>BUILT WITH</span>
+              <em>AI.</em>
+            </h1>
+            <div class="hero-intro">
+              <p>
+                张佳楠，AI 漫剧导演与视觉设计师。<br />
+                把剧本、资产、分镜与生成整合成一条可持续的影像生产线。
+              </p>
+              <a class="round-cta" href="#works">
+                <span>VIEW<br />PROJECTS</span>
+                <b>↓</b>
+              </a>
             </div>
           </div>
 
-          <aside class="work-detail">
-            <button class="work-preview" type="button" data-open-work-preview aria-label="播放当前作品视频">
-              <video
-                data-work-video
-                src="assets/videos/project-nezha.mp4"
-                poster="assets/poster-project-nezha.jpg"
-                muted
-                loop
-                playsinline
-                preload="metadata"
-              ></video>
-              <span>播放预览</span>
+          <aside class="hero-index" aria-label="代表项目">
+            <p>FEATURED / 03</p>
+            <button class="is-active" type="button" data-hero-project="0">
+              <span>01</span>
+              <strong>千万家产试真情</strong>
             </button>
-            <div class="work-detail-copy">
-              <small data-work-category>神话 / 角色动态</small>
-              <h3 data-work-title>《哪吒》动态短片</h3>
-              <p data-work-copy>东方神话角色动态短片，强调角色能量、镜头推进和神话视觉冲击。</p>
-              <button class="pill primary" type="button" data-open-work>播放视频</button>
-            </div>
+            <button type="button" data-hero-project="1">
+              <span>02</span>
+              <strong>高考落榜后，我把游戏物资带回现实</strong>
+            </button>
+            <button type="button" data-hero-project="2">
+              <span>03</span>
+              <strong>分手后，天降龙宝带我制霸四海</strong>
+            </button>
           </aside>
         </div>
+
+        <div class="hero-footer">
+          <span>BASED IN CHINA · AVAILABLE FOR COLLABORATION</span>
+          <span data-hero-caption>REALISTIC FAMILY DRAMA / 44 EPISODES</span>
+        </div>
       </section>
 
-      <section class="case-screen" id="game-inventory" aria-labelledby="game-case-title">
-        <div class="case-shell">
-          <header class="case-heading reveal-item">
-            <div>
-              <p class="kicker">AI DRAMA · PROJECT BREAKDOWN</p>
-              <h2 id="game-case-title">从资产拆解，到完整成片</h2>
-            </div>
+      <div class="ticker" aria-hidden="true">
+        <div>
+          <span>AI DRAMA DIRECTION</span><i>✦</i>
+          <span>CHARACTER CONSISTENCY</span><i>✦</i>
+          <span>STORYBOARD SYSTEM</span><i>✦</i>
+          <span>VISUAL DEVELOPMENT</span><i>✦</i>
+          <span>AI DRAMA DIRECTION</span><i>✦</i>
+          <span>CHARACTER CONSISTENCY</span><i>✦</i>
+        </div>
+      </div>
+
+      <section class="manifesto section-shell" aria-labelledby="manifesto-title">
+        <div class="section-label reveal">
+          <span>00</span>
+          <p>PROFILE / APPROACH</p>
+        </div>
+        <div class="manifesto-copy reveal">
+          <p class="overline">不只生成画面，更建立生产秩序</p>
+          <h2 id="manifesto-title">
+            我把 AI 从单点工具，<br />
+            变成一套<span>可落地的影像系统。</span>
+          </h2>
+          <div class="manifesto-detail">
             <p>
-              《高考落榜后，我把游戏物资带回现实》以“游戏物资进入现实”为核心设定，
-              完成角色、场景、道具、站位与连续镜头的一体化生产。
+              从故事理解和资产拆解开始，统一人物、场景、道具与镜头逻辑，
+              再进入动态生成、声音设计和后期剪辑。目标不是一张漂亮的图，
+              而是一部能连续讲故事的作品。
             </p>
-          </header>
-
-          <div class="case-feature reveal-item">
-            <div class="case-player">
-              <div class="case-player-meta" aria-hidden="true">
-                <span>EP.38—40 · HIGHLIGHT CUT</span>
-                <span>03:26</span>
-              </div>
-              <video
-                controls
-                playsinline
-                preload="metadata"
-                poster="assets/poster-project-game-inventory.jpg"
-                aria-label="《高考落榜后，我把游戏物资带回现实》第 38 至 40 集高光片段"
-              >
-                <source src="assets/videos/game-inventory-38-40.mp4" type="video/mp4" />
-                你的浏览器暂不支持视频播放。
-              </video>
-            </div>
-
-            <aside class="case-notes">
-              <span class="case-index">CASE 08</span>
-              <h3>高考落榜后，<br />我把游戏物资带回现实</h3>
-              <p>
-                现实线与游戏线并行推进，在统一角色形象与空间逻辑的基础上，
-                用高密度动作、界面信息和物资设定强化爽点。
-              </p>
-              <dl class="case-stats">
-                <div><dt>45</dt><dd>集连续内容</dd></div>
-                <div><dt>122</dt><dd>张视觉资产</dd></div>
-                <div><dt>89</dt><dd>段视频素材</dd></div>
-                <div><dt>16</dt><dd>段声音素材</dd></div>
-              </dl>
-            </aside>
-          </div>
-
-          <div class="case-process reveal-item">
-            <div class="case-process-title">
-              <span>PRODUCTION PIPELINE</span>
-              <p>01 剧本拆解 → 02 角色定型 → 03 场景搭建 → 04 道具设定 → 05 镜头站位</p>
-            </div>
-            <div class="case-process-grid">
-              <figure>
-                <img src="assets/case-game-inventory/process-character.jpg" alt="林志角色多视角设定" loading="lazy" />
-                <figcaption><span>02</span><strong>角色定型</strong><small>统一正侧背与表情特征</small></figcaption>
-              </figure>
-              <figure>
-                <img src="assets/case-game-inventory/process-scene.jpg" alt="黑金拍卖库圆形大厅场景设定" loading="lazy" />
-                <figcaption><span>03</span><strong>场景搭建</strong><small>建立可连续拍摄的空间</small></figcaption>
-              </figure>
-              <figure>
-                <img src="assets/case-game-inventory/process-prop.jpg" alt="游戏烟雾弹道具设定" loading="lazy" />
-                <figcaption><span>04</span><strong>道具设定</strong><small>服务剧情的高识别资产</small></figcaption>
-              </figure>
-              <figure>
-                <img src="assets/case-game-inventory/process-blocking.jpg" alt="角色与场景镜头站位设计" loading="lazy" />
-                <figcaption><span>05</span><strong>镜头站位</strong><small>先锁空间关系，再生成连续镜头</small></figcaption>
-              </figure>
-            </div>
+            <dl>
+              <div><dt>10+</dt><dd>年视觉设计经验</dd></div>
+              <div><dt>03</dt><dd>部重点 AI 漫剧</dd></div>
+              <div><dt>212</dt><dd>段项目视频资产</dd></div>
+              <div><dt>200+</dt><dd>张角色与场景资产</dd></div>
+            </dl>
           </div>
         </div>
       </section>
 
-      <section class="statement-screen" id="strengths">
-        <div class="section-head reveal-item">
-          <p class="kicker">CORE STRENGTHS</p>
-          <h2>个人优势</h2>
-        </div>
+      <section class="projects" id="works" aria-labelledby="works-title">
+        <header class="projects-head section-shell reveal">
+          <div class="section-label">
+            <span>01</span>
+            <p>SELECTED WORKS / 2026</p>
+          </div>
+          <h2 id="works-title">THREE STORIES.<br /><span>THREE WORLDS.</span></h2>
+        </header>
 
-        <div class="strength-grid">
-          <article class="strength-card reveal-item">
-            <small>01</small>
-            <h3>完整项目主导能力</h3>
-            <span></span>
-          </article>
-          <article class="strength-card lime reveal-item">
-            <small>02</small>
-            <h3>品牌视觉体系搭建</h3>
-            <p>品牌识别系统梳理 / 视觉规范与图像风格</p>
-          </article>
-          <article class="strength-card reveal-item">
-            <small>03</small>
-            <h3>AI 设计提效</h3>
-            <span></span>
-          </article>
-          <article class="strength-card reveal-item">
-            <small>04</small>
-            <h3>设计管理统筹</h3>
-            <span></span>
-          </article>
-          <article class="strength-card reveal-item">
-            <small>05</small>
-            <h3>跨部门协同</h3>
-            <span></span>
-          </article>
-        </div>
+        <article class="project project-portrait reveal" id="wealth">
+          <div class="project-no">01</div>
+          <div class="project-visual">
+            <img
+              src="assets/red-portfolio/million-estate-poster.jpg"
+              alt="《千万家产试真情》成片画面"
+              loading="lazy"
+            />
+            <button class="play-button" type="button" data-play-project="wealth">
+              <span>PLAY FILM</span><b>▶</b>
+            </button>
+            <div class="project-format">9:16 / 01:24</div>
+          </div>
+          <div class="project-copy">
+            <p class="project-category">现实情感 / 家庭反转 / AI 漫剧</p>
+            <h3>千万家产<br />试真情</h3>
+            <p class="project-description">
+              以千万家产为情感试金石，在家庭关系、身份隐瞒与利益冲突中推进人物选择。
+              项目建立了覆盖多年龄角色、生活场景与连续剧集的写实资产体系。
+            </p>
+            <ul class="project-tags" aria-label="项目职责">
+              <li>剧本拆解</li><li>角色定型</li><li>场景统筹</li><li>分镜与成片</li>
+            </ul>
+            <div class="project-data">
+              <span><strong>44</strong> 集内容</span>
+              <span><strong>115</strong> 张视觉资产</span>
+              <span><strong>118</strong> 段视频素材</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project-landscape reveal" id="game">
+          <div class="project-no">02</div>
+          <div class="project-visual">
+            <img
+              src="assets/red-portfolio/game-inventory-poster.jpg"
+              alt="《高考落榜后，我把游戏物资带回现实》成片画面"
+              loading="lazy"
+            />
+            <button class="play-button" type="button" data-play-project="game">
+              <span>PLAY HIGHLIGHT</span><b>▶</b>
+            </button>
+            <div class="project-format">16:9 / 03:27</div>
+          </div>
+          <div class="project-copy">
+            <p class="project-category">现实穿越 / FPS 世界 / 3D AI 漫剧</p>
+            <h3>高考落榜后，<br />我把游戏物资<br />带回现实</h3>
+            <p class="project-description">
+              现实线与游戏线并行推进，以稳定的角色模型、科幻场景和物资道具搭建世界观。
+              高光片段覆盖第 38—40 集，集中呈现动作、界面与叙事节奏。
+            </p>
+            <ul class="project-tags" aria-label="项目职责">
+              <li>45 集资产拆解</li><li>世界观设定</li><li>镜头站位</li><li>高光剪辑</li>
+            </ul>
+            <div class="project-data">
+              <span><strong>45</strong> 集连续内容</span>
+              <span><strong>122</strong> 张视觉资产</span>
+              <span><strong>89</strong> 段视频素材</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project-portrait project-last reveal" id="dragon">
+          <div class="project-no">03</div>
+          <div class="project-visual">
+            <img
+              src="assets/red-portfolio/dragon-baby-poster.jpg"
+              alt="《分手后，天降龙宝带我制霸四海》成片画面"
+              loading="lazy"
+            />
+            <button class="play-button" type="button" data-play-project="dragon">
+              <span>PLAY CONCEPT</span><b>▶</b>
+            </button>
+            <div class="project-format">9:16 / 00:14</div>
+          </div>
+          <div class="project-copy">
+            <p class="project-category">都市逆袭 / 萌宠奇遇 / 概念短片</p>
+            <h3>分手后，<br />天降龙宝带我<br />制霸四海</h3>
+            <p class="project-description">
+              从龙虾生物设定到竖屏故事板，把市场冲突、奇遇设定和人物反应压缩进高密度短片。
+              以明确的镜头表推进多角度生成，验证概念到动态画面的快速闭环。
+            </p>
+            <ul class="project-tags" aria-label="项目职责">
+              <li>概念设计</li><li>道具设定</li><li>竖屏分镜</li><li>动态生成</li>
+            </ul>
+            <div class="project-data">
+              <span><strong>05</strong> 段动态测试</span>
+              <span><strong>13</strong> 张设定素材</span>
+              <span><strong>01</strong> 套分镜系统</span>
+            </div>
+          </div>
+        </article>
       </section>
 
-      <section class="visual-screen">
-        <div class="section-head reveal-item">
-          <p class="kicker">VISUAL DEVELOPMENT</p>
-          <h2>设定图集</h2>
-        </div>
-
-        <div class="gallery-grid">
-          <button class="gallery-card reveal-item" type="button" data-gallery="golden">
-            <img src="assets/settings/golden-character.jpg" alt="《金色》人物设定" loading="lazy" />
-            <span>《金色》视觉设定</span>
-          </button>
-          <button class="gallery-card reveal-item" type="button" data-gallery="monks">
-            <img src="assets/settings/monks-scene.jpg" alt="《小道士与小和尚》场景设定" loading="lazy" />
-            <span>小道士与小和尚</span>
-          </button>
-          <button class="gallery-card reveal-item" type="button" data-gallery="cyber">
-            <img src="assets/settings/cyber-scene.jpg" alt="赛博废土场景设定" loading="lazy" />
-            <span>赛博废土机能风</span>
-          </button>
-          <button class="gallery-card reveal-item" type="button" data-gallery="youyou">
-            <img src="assets/settings/youyou-character.jpg" alt="《悠悠我心》人物设定" loading="lazy" />
-            <span>《悠悠我心》</span>
-          </button>
-          <button class="gallery-card reveal-item" type="button" data-gallery="wedding">
-            <img src="assets/settings/wedding-scene.jpg" alt="《结婚》婚房场景设定" loading="lazy" />
-            <span>婚礼空间氛围</span>
-          </button>
-          <button class="gallery-card reveal-item" type="button" data-gallery="girl">
-            <img src="assets/settings/girl-character.jpg" alt="《丫头也好命》人物设定" loading="lazy" />
-            <span>丫头也好命</span>
-          </button>
-          <button class="gallery-card reveal-item" type="button" data-gallery="golden">
-            <img src="assets/settings/golden-world.jpg" alt="《金色》仙界场景设定" loading="lazy" />
-            <span>仙界世界观</span>
-          </button>
-          <button class="gallery-card reveal-item" type="button" data-gallery="cyber">
-            <img src="assets/settings/cyber-engineer.jpg" alt="赛博废土工程师人物设定" loading="lazy" />
-            <span>机能角色设定</span>
-          </button>
-        </div>
-      </section>
-
-      <section class="contact-screen" id="contact">
-        <div class="contact-card reveal-item">
-          <p class="kicker">CONTACT</p>
-          <h2>一起做有记忆点的 AI 影像</h2>
+      <section class="pipeline section-shell" id="pipeline" aria-labelledby="pipeline-title">
+        <header class="pipeline-head reveal">
+          <div class="section-label">
+            <span>02</span>
+            <p>PRODUCTION SYSTEM</p>
+          </div>
           <div>
-            <a class="pill primary" href="mailto:563090126@qq.com">563090126@qq.com</a>
-            <a class="pill ghost" href="tel:18500419419">185-0041-9419</a>
+            <p class="overline">从文字到成片的完整路径</p>
+            <h2 id="pipeline-title">ONE PIPELINE.<br /><span>EVERY FRAME CONTROLLED.</span></h2>
+          </div>
+        </header>
+
+        <div class="pipeline-steps reveal" aria-label="制作流程">
+          <span>01 STORY</span><i>→</i>
+          <span>02 ASSETS</span><i>→</i>
+          <span>03 STORYBOARD</span><i>→</i>
+          <span>04 MOTION</span><i>→</i>
+          <span>05 FINAL CUT</span>
+        </div>
+
+        <div class="asset-grid">
+          <figure class="asset-card asset-tall reveal">
+            <img src="assets/red-portfolio/wealth-character.jpg" alt="《千万家产试真情》林守义角色设定" loading="lazy" />
+            <figcaption><span>CHARACTER</span><strong>多年龄角色统一</strong><small>身份、服装与正侧背视图</small></figcaption>
+          </figure>
+          <figure class="asset-card reveal">
+            <img src="assets/red-portfolio/wealth-scene.jpg" alt="《千万家产试真情》菜市场场景设定" loading="lazy" />
+            <figcaption><span>ENVIRONMENT</span><strong>写实生活场景</strong><small>光线、空间与连续机位</small></figcaption>
+          </figure>
+          <figure class="asset-card asset-red reveal">
+            <img src="assets/red-portfolio/wealth-prop.jpg" alt="剧情关键道具旧款手机设定" loading="lazy" />
+            <figcaption><span>STORY PROP</span><strong>关键道具可视化</strong><small>让物件参与叙事</small></figcaption>
+          </figure>
+          <figure class="asset-card asset-wide reveal">
+            <img src="assets/red-portfolio/game-blocking.jpg" alt="游戏场景人物镜头站位设计" loading="lazy" />
+            <figcaption><span>BLOCKING</span><strong>先锁定空间关系</strong><small>角色站位与镜头调度</small></figcaption>
+          </figure>
+          <figure class="asset-card reveal">
+            <img src="assets/red-portfolio/game-character.jpg" alt="林志角色多视角设定" loading="lazy" />
+            <figcaption><span>CONSISTENCY</span><strong>主角形象锚定</strong><small>跨集保持稳定识别</small></figcaption>
+          </figure>
+          <figure class="asset-card asset-wide reveal">
+            <img src="assets/red-portfolio/game-scene.jpg" alt="黑金拍卖库圆形大厅场景设定" loading="lazy" />
+            <figcaption><span>WORLD BUILDING</span><strong>核心场景资产</strong><small>为连续镜头建立空间基准</small></figcaption>
+          </figure>
+          <figure class="asset-card asset-tall reveal">
+            <img src="assets/red-portfolio/dragon-storyboard.jpg" alt="天降龙宝竖屏导演分镜故事板" loading="lazy" />
+            <figcaption><span>STORYBOARD</span><strong>导演分镜表</strong><small>景别、运动、对白与时长</small></figcaption>
+          </figure>
+          <figure class="asset-card reveal">
+            <img src="assets/red-portfolio/dragon-prop.jpg" alt="蓝色龙虾多角度生物设定" loading="lazy" />
+            <figcaption><span>CREATURE DESIGN</span><strong>龙宝多视角设定</strong><small>造型细节服务动态生成</small></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="about section-shell" id="about" aria-labelledby="about-title">
+        <div class="section-label reveal">
+          <span>03</span>
+          <p>ABOUT / CAPABILITIES</p>
+        </div>
+        <div class="about-main reveal">
+          <div class="about-title">
+            <p class="overline">AI VISUAL DESIGNER · DRAMA DIRECTOR</p>
+            <h2 id="about-title">张佳楠<br /><span>ZHANG JIANAN</span></h2>
+          </div>
+          <div class="about-bio">
+            <p>
+              拥有 10 年以上 UI/UX、品牌视觉、电商视觉与网页设计经验，
+              现在专注 AI 漫剧创作和 AIGC 视觉工作流。擅长把审美、商业理解与新工具连接起来，
+              形成稳定、可复用、能交付的内容生产方式。
+            </p>
+            <div class="capability-list">
+              <div><span>01</span><strong>AI 漫剧全流程</strong><small>剧本 / 资产 / 分镜 / 动态 / 后期</small></div>
+              <div><span>02</span><strong>视觉系统搭建</strong><small>角色一致性 / 场景规范 / 风格控制</small></div>
+              <div><span>03</span><strong>品牌与产品视觉</strong><small>品牌 / UIUX / 电商 / 网页</small></div>
+              <div><span>04</span><strong>项目统筹协作</strong><small>流程设计 / 质量控制 / 跨团队推进</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-inner section-shell reveal">
+          <p class="eyebrow"><span></span> OPEN FOR COLLABORATION</p>
+          <h2 id="contact-title">LET’S MAKE<br /><em>SOMETHING MOVE.</em></h2>
+          <div class="contact-row">
+            <p>有故事、有产品，或者有一个还没被看见的想法？<br />我们可以从第一帧开始。</p>
+            <div>
+              <a href="mailto:563090126@qq.com">563090126@qq.com <span>↗</span></a>
+              <a href="tel:18500419419">185 0041 9419 <span>↗</span></a>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <strong>JIANAN.</strong>
-      <span>张佳楠 / AI 漫剧视觉设计 / <span id="year"></span></span>
+    <footer class="footer section-shell">
+      <strong>J/N STUDIO</strong>
+      <span>张佳楠 · AI 漫剧视觉设计</span>
+      <span>© <b data-year></b></span>
     </footer>
 
     <div class="video-modal" data-video-modal hidden>
       <div class="modal-backdrop" data-close-video></div>
-      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="video-title">
-        <div class="modal-head">
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <header>
           <div>
-            <p class="kicker">SELECTED WORK</p>
-            <h2 id="video-title" data-video-title>视频作品</h2>
+            <p>NOW PLAYING</p>
+            <h2 id="modal-title" data-modal-title>项目视频</h2>
           </div>
-          <button class="close-button" type="button" data-close-video aria-label="关闭视频">关闭</button>
+          <button type="button" data-close-video aria-label="关闭视频">CLOSE ×</button>
+        </header>
+        <div class="modal-stage" data-modal-stage>
+          <video controls playsinline preload="metadata" data-modal-video></video>
         </div>
-        <video class="video-player" data-video-player controls playsinline preload="metadata"></video>
       </section>
     </div>
 
-    <div class="gallery-modal" data-gallery-modal hidden>
-      <div class="modal-backdrop" data-close-gallery></div>
-      <section class="gallery-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
-        <div class="modal-head">
-          <div>
-            <p class="kicker">VISUAL DEVELOPMENT</p>
-            <h2 id="gallery-title" data-gallery-title>设定图集</h2>
-          </div>
-          <button class="close-button" type="button" data-close-gallery aria-label="关闭图集">关闭</button>
-        </div>
-        <figure class="gallery-stage">
-          <img data-gallery-image src="" alt="" />
-          <figcaption data-gallery-caption></figcaption>
-        </figure>
-        <div class="gallery-controls">
-          <button type="button" data-gallery-prev>上一张</button>
-          <span data-gallery-position>01 / 03</span>
-          <button type="button" data-gallery-next>下一张</button>
-        </div>
-        <div class="gallery-thumbs" data-gallery-thumbs aria-label="图集缩略图"></div>
-      </section>
-    </div>
-
-    <script src="portfolio-dark.js?v=20260731-game-case"></script>
+    <script src="portfolio-dark.js?v=20260731-redesign"></script>
   </body>
 </html>
