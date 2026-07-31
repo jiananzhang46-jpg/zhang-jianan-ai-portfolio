@@ -9,7 +9,7 @@
     />
     <title>张佳楠 | JIANAN Portfolio</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="portfolio-dark.css?v=20260626-github-live-1" />
+    <link rel="stylesheet" href="portfolio-dark.css?v=20260731-game-case" />
   </head>
   <body>
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -24,6 +24,7 @@
       <nav class="nav" id="site-nav" aria-label="主导航">
         <a href="#works">工作经历</a>
         <a href="#visuals">精选作品</a>
+        <a href="#game-inventory">项目全案</a>
         <a href="#strengths">个人优势</a>
       </nav>
       <a class="top-cta" href="#contact">联系我</a>
@@ -175,6 +176,10 @@
                 <img src="assets/poster-project-cps-six-wheel.png" alt="《CPS 六轮滚轮仪》产品视频" loading="lazy" />
                 <span>CPS 产品</span>
               </button>
+              <button class="collage-tile landscape" type="button" data-work-select="7" aria-pressed="false">
+                <img src="assets/poster-project-game-inventory.jpg" alt="《高考落榜后，我把游戏物资带回现实》高光片段" loading="lazy" />
+                <span>游戏物资漫剧</span>
+              </button>
             </div>
           </div>
 
@@ -198,6 +203,80 @@
               <button class="pill primary" type="button" data-open-work>播放视频</button>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section class="case-screen" id="game-inventory" aria-labelledby="game-case-title">
+        <div class="case-shell">
+          <header class="case-heading reveal-item">
+            <div>
+              <p class="kicker">AI DRAMA · PROJECT BREAKDOWN</p>
+              <h2 id="game-case-title">从资产拆解，到完整成片</h2>
+            </div>
+            <p>
+              《高考落榜后，我把游戏物资带回现实》以“游戏物资进入现实”为核心设定，
+              完成角色、场景、道具、站位与连续镜头的一体化生产。
+            </p>
+          </header>
+
+          <div class="case-feature reveal-item">
+            <div class="case-player">
+              <div class="case-player-meta" aria-hidden="true">
+                <span>EP.38—40 · HIGHLIGHT CUT</span>
+                <span>03:26</span>
+              </div>
+              <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="assets/poster-project-game-inventory.jpg"
+                aria-label="《高考落榜后，我把游戏物资带回现实》第 38 至 40 集高光片段"
+              >
+                <source src="assets/videos/game-inventory-38-40.mp4" type="video/mp4" />
+                你的浏览器暂不支持视频播放。
+              </video>
+            </div>
+
+            <aside class="case-notes">
+              <span class="case-index">CASE 08</span>
+              <h3>高考落榜后，<br />我把游戏物资带回现实</h3>
+              <p>
+                现实线与游戏线并行推进，在统一角色形象与空间逻辑的基础上，
+                用高密度动作、界面信息和物资设定强化爽点。
+              </p>
+              <dl class="case-stats">
+                <div><dt>45</dt><dd>集连续内容</dd></div>
+                <div><dt>122</dt><dd>张视觉资产</dd></div>
+                <div><dt>89</dt><dd>段视频素材</dd></div>
+                <div><dt>16</dt><dd>段声音素材</dd></div>
+              </dl>
+            </aside>
+          </div>
+
+          <div class="case-process reveal-item">
+            <div class="case-process-title">
+              <span>PRODUCTION PIPELINE</span>
+              <p>01 剧本拆解 → 02 角色定型 → 03 场景搭建 → 04 道具设定 → 05 镜头站位</p>
+            </div>
+            <div class="case-process-grid">
+              <figure>
+                <img src="assets/case-game-inventory/process-character.jpg" alt="林志角色多视角设定" loading="lazy" />
+                <figcaption><span>02</span><strong>角色定型</strong><small>统一正侧背与表情特征</small></figcaption>
+              </figure>
+              <figure>
+                <img src="assets/case-game-inventory/process-scene.jpg" alt="黑金拍卖库圆形大厅场景设定" loading="lazy" />
+                <figcaption><span>03</span><strong>场景搭建</strong><small>建立可连续拍摄的空间</small></figcaption>
+              </figure>
+              <figure>
+                <img src="assets/case-game-inventory/process-prop.jpg" alt="游戏烟雾弹道具设定" loading="lazy" />
+                <figcaption><span>04</span><strong>道具设定</strong><small>服务剧情的高识别资产</small></figcaption>
+              </figure>
+              <figure>
+                <img src="assets/case-game-inventory/process-blocking.jpg" alt="角色与场景镜头站位设计" loading="lazy" />
+                <figcaption><span>05</span><strong>镜头站位</strong><small>先锁空间关系，再生成连续镜头</small></figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -332,6 +411,6 @@
       </section>
     </div>
 
-    <script src="portfolio-dark.js?v=20260626-github-live-1"></script>
+    <script src="portfolio-dark.js?v=20260731-game-case"></script>
   </body>
 </html>

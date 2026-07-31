@@ -22,6 +22,13 @@ assets/modules/*
 !assets/poster-project-liveaction.jpg
 !assets/poster-project-cps-six-wheel.png
 !assets/poster-project-dragon-baby.png
+!assets/poster-project-game-inventory.jpg
+!assets/case-game-inventory/
+assets/case-game-inventory/*
+!assets/case-game-inventory/process-character.jpg
+!assets/case-game-inventory/process-scene.jpg
+!assets/case-game-inventory/process-prop.jpg
+!assets/case-game-inventory/process-blocking.jpg
 !assets/settings/
 assets/settings/*
 !assets/settings/golden-character.jpg
@@ -52,6 +59,7 @@ assets/videos/*
 !assets/videos/project-liveaction.mp4
 !assets/videos/cps-six-wheel-roller-kit-web.mp4
 !assets/videos/dragon-baby-1111.mp4
+!assets/videos/game-inventory-38-40.mp4
 
 .vercel/
 .media-tools/

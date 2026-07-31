@@ -71,6 +71,13 @@ const projects = [
     poster: "assets/poster-project-dragon-baby.png",
     video: "assets/videos/dragon-baby-1111.mp4",
   },
+  {
+    title: "《高考落榜后，我把游戏物资带回现实》",
+    category: "AI 漫剧 / 38—40 集高光",
+    copy: "从剧本拆解、角色与场景资产，到站位设计和连续镜头，完成一套可复用的 AI 漫剧生产链。",
+    poster: "assets/poster-project-game-inventory.jpg",
+    video: "assets/videos/game-inventory-38-40.mp4",
+  },
 ];
 
 const galleries = {
