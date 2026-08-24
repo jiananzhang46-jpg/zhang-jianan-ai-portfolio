@@ -223,6 +223,36 @@ body.has-fine-pointer .pointer-glow {
   transform: scaleX(1);
 }
 
+.nav .nav-resume {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 9px 12px;
+  border: 1px solid rgba(225, 22, 29, 0.72);
+  color: white;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.nav .nav-resume span {
+  color: var(--red);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+}
+
+.nav .nav-resume::after {
+  display: none;
+}
+
+.nav .nav-resume:hover {
+  border-color: var(--red);
+  background: var(--red);
+}
+
+.nav .nav-resume:hover span {
+  color: white;
+}
+
 .header-contact {
   display: inline-flex;
   gap: 14px;
@@ -474,6 +504,53 @@ body.has-fine-pointer .pointer-glow {
   background: white;
   color: black;
   transform: translateY(-3px);
+}
+
+.resume-cta {
+  display: inline-flex;
+  gap: 34px;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 224px;
+  padding: 14px 16px;
+  border: 1px solid rgba(241, 237, 231, 0.54);
+  background: rgba(5, 5, 5, 0.52);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease, transform 200ms ease;
+}
+
+.resume-cta span {
+  display: grid;
+  gap: 4px;
+}
+
+.resume-cta small {
+  color: rgba(241, 237, 231, 0.48);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.resume-cta b {
+  color: var(--red);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.resume-cta:hover {
+  border-color: white;
+  background: white;
+  color: black;
+  transform: translateY(-3px);
+}
+
+.resume-cta:hover small {
+  color: rgba(0, 0, 0, 0.52);
 }
 
 .hero-intro > p {
@@ -2168,6 +2245,11 @@ body.has-fine-pointer .pointer-glow {
     border-bottom: 1px solid var(--line);
   }
 
+  .nav .nav-resume {
+    margin-block: 8px;
+    padding: 14px;
+  }
+
   .hero-grid {
     width: calc(100% - 36px);
     padding-top: 112px;
@@ -2361,11 +2443,17 @@ body.has-fine-pointer .pointer-glow {
   .hero-actions {
     gap: 12px;
     width: 100%;
+    flex-wrap: wrap;
   }
 
   .hero-play {
     min-width: 0;
     flex: 1;
+  }
+
+  .resume-cta {
+    min-width: 0;
+    flex: 1 1 100%;
   }
 
   .round-cta {
