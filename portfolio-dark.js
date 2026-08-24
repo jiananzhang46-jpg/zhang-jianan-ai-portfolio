@@ -26,6 +26,8 @@ const pipelineFocus = document.querySelector(".pipeline-focus");
 const pipelineNumber = document.querySelector("[data-pipeline-number]");
 const pipelineTitle = document.querySelector("[data-pipeline-title]");
 const pipelineCopy = document.querySelector("[data-pipeline-copy]");
+const pipelineOutput = document.querySelector("[data-pipeline-output]");
+const pipelineRule = document.querySelector("[data-pipeline-rule]");
 const backToTop = document.querySelector("[data-back-to-top]");
 const magneticItems = [...document.querySelectorAll("[data-magnetic]")];
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -81,28 +83,45 @@ const projectOrder = Object.keys(projects);
 const pipelineContent = [
   {
     number: "01",
-    title: "剧本拆解与视觉定调",
-    copy: "先梳理人物关系、情绪转折与高光节点，让每个镜头都有明确叙事任务。",
+    title: "剧本全量扫描",
+    copy: "按集、场、时段、内外景与剧情功能拆开剧本，区分实际入镜地点和台词提及地点，确保没有漏场或重复建设。",
+    output: "场次清单 · 人物关系 · 高光节点 · 风险项",
+    rule: "每一个实际入镜场次都有明确资产归属",
   },
   {
     number: "02",
-    title: "角色与场景资产搭建",
-    copy: "锁定角色面貌、服装、道具和核心场景，为跨镜头、跨集的一致性建立视觉基准。",
+    title: "资产分级与复用规划",
+    copy: "按剧情关键性、出现频率、表演复杂度和世界观辨识度进行 S／A／B／C 分级，同一地点合并管理，并拆出必要的昼夜与状态变体。",
+    output: "资产总表 · 优先级 · 子资产清单 · 复用矩阵",
+    rule: "不虚增核心资产，不把不同功能空间错误合并",
   },
   {
     number: "03",
-    title: "分镜设计与空间调度",
-    copy: "用景别、机位、人物站位和节奏变化，把文字故事转译成可执行的镜头方案。",
+    title: "角色与场景视觉锚定",
+    copy: "建立角色多视角设定、服装与道具基准；场景锁定空间结构、真实材质、统一色彩和 3—5 个跨图一致性锚点。",
+    output: "Character Sheet · 场景主视角 · 道具资产 · 风格圣经",
+    rule: "人物身份、服装、道具尺寸、空间结构与光向可连续复现",
   },
   {
     number: "04",
-    title: "动态生成与质量控制",
-    copy: "围绕表演、运镜和连续性反复筛选、修正，让 AI 生成结果服务剧情而不是喧宾夺主。",
+    title: "分镜设计与空间调度",
+    copy: "根据表演区和行动路线安排景别、机位、焦段与人物站位；对话镜头遵守 180° 轴线，正反打共享同一空间逻辑。",
+    output: "镜头表 · 站位图 · 正反打背景 · 运镜与节奏方案",
+    rule: "门窗、光源、陈设和人物方向不越轴、不跳变",
   },
   {
     number: "05",
-    title: "剪辑、声音与最终交付",
-    copy: "完成节奏重组、字幕、音效和版本管理，输出适合竖屏观看的完整成片。",
+    title: "动态生成与版本筛选",
+    copy: "围绕表演、动作、镜头运动和首尾帧连续性拆成可执行小段；完整对话尽量留在同段，通过版本对比保留真正服务剧情的结果。",
+    output: "分段时长表 · 动态镜头 · 表演版本 · 问题回修单",
+    rule: "不截断语义，不变脸、不穿模、不漂移，不使用无动机运镜",
+  },
+  {
+    number: "06",
+    title: "剪辑、声音与成片验收",
+    copy: "完成节奏重组、对白与音效、字幕和画幅适配，并逐镜复查人物、道具、空间和情绪连续性，形成可发布版本。",
+    output: "完整成片 · 字幕版 · 平台适配版 · 项目归档",
+    rule: "叙事清楚、声音准确、字幕无误、跨镜头连续",
   },
 ];
 
@@ -303,12 +322,14 @@ function setPipelineStep(index) {
     button.setAttribute("aria-selected", String(active));
     button.tabIndex = active ? 0 : -1;
   });
-  if (!pipelineFocus || !pipelineNumber || !pipelineTitle || !pipelineCopy) return;
+  if (!pipelineFocus || !pipelineNumber || !pipelineTitle || !pipelineCopy || !pipelineOutput || !pipelineRule) return;
   pipelineFocus.classList.remove("is-changing");
   void pipelineFocus.offsetWidth;
   pipelineNumber.textContent = content.number;
   pipelineTitle.textContent = content.title;
   pipelineCopy.textContent = content.copy;
+  pipelineOutput.textContent = content.output;
+  pipelineRule.textContent = content.rule;
   pipelineFocus.classList.add("is-changing");
 }
 
