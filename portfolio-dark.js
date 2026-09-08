@@ -270,6 +270,7 @@ if (statsPanel && !reducedMotion.matches) {
 }
 
 const observedSections = navLinks
+  .filter((link) => link.getAttribute("href")?.startsWith("#"))
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 
@@ -481,3 +482,13 @@ setHero(0);
 setPipelineStep(0);
 startHeroTimer();
 updateScrollState();
+
+// Keep the screening room quiet when the viewer starts another film.
+const screeningVideos = [...document.querySelectorAll("#design video, #product-videos video")];
+screeningVideos.forEach((video) => {
+  video.addEventListener("play", () => {
+    screeningVideos.forEach((other) => {
+      if (other !== video) other.pause();
+    });
+  });
+});
