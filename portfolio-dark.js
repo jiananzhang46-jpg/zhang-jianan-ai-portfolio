@@ -34,51 +34,47 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 
 const projects = {
-  wutong: {
-    title: "《错将真心落梧桐》",
-    src: "assets/portfolio-series/wutong.mp4",
-    poster: "assets/portfolio-series/wutong-poster.jpg",
-    portrait: true,
+  "white-tiger-34": {
+    "title": "《被弃深山，白虎报恩助我赶山暴富》第 34 集",
+    "src": "assets/selected-september/white-tiger-34.mp4",
+    "poster": "assets/selected-september/white-tiger-34.jpg",
+    "portrait": true
   },
-  dragon: {
-    title: "《天降龙宝》",
-    src: "assets/portfolio-series/dragon.mp4",
-    poster: "assets/portfolio-series/dragon-poster.jpg",
-    portrait: true,
+  "white-tiger-35": {
+    "title": "《被弃深山，白虎报恩助我赶山暴富》第 35 集",
+    "src": "assets/selected-september/white-tiger-35.mp4",
+    "poster": "assets/selected-september/white-tiger-35.jpg",
+    "portrait": true
   },
-  heiress: {
-    title: "《团宠假千金杀疯京圈》",
-    src: "assets/portfolio-series/heiress.mp4",
-    poster: "assets/portfolio-series/heiress-poster.jpg",
-    portrait: true,
+  "mountain-wife-74": {
+    "title": "《荒年被弃乱葬岗，捡个山神老婆翻身》第 74 集",
+    "src": "assets/selected-september/mountain-wife-74.mp4",
+    "poster": "assets/selected-september/mountain-wife-74.jpg",
+    "portrait": true
   },
-  breakingDoor: {
-    title: "《破门》",
-    src: "assets/portfolio-series/breaking-door.mp4",
-    poster: "assets/portfolio-series/breaking-door-poster.jpg",
-    portrait: true,
+  "mountain-wife-75": {
+    "title": "《荒年被弃乱葬岗，捡个山神老婆翻身》第 75 集",
+    "src": "assets/selected-september/mountain-wife-75.mp4",
+    "poster": "assets/selected-september/mountain-wife-75.jpg",
+    "portrait": true
   },
-  undercover: {
-    title: "《重回深渊：卧底女王》",
-    src: "assets/portfolio-series/undercover.mp4",
-    poster: "assets/portfolio-series/undercover-poster.jpg",
-    portrait: true,
+  "mermaid-31": {
+    "title": "《契约人鱼公主》第 31 集",
+    "src": "assets/selected-september/mermaid-31.mp4",
+    "poster": "assets/selected-september/mermaid-31.jpg",
+    "portrait": true
   },
-  game: {
-    title: "《高考落榜后，我把游戏物资带回现实》38—40 集高光",
-    src: "assets/red-portfolio/game-inventory.mp4",
-    poster: "assets/red-portfolio/game-inventory-poster.jpg",
-    portrait: false,
-  },
+  "mermaid-32": {
+    "title": "《契约人鱼公主》第 32 集",
+    "src": "assets/selected-september/mermaid-32.mp4",
+    "poster": "assets/selected-september/mermaid-32.jpg",
+    "portrait": true
+  }
 };
 
-const heroCaptions = [
-  "《错将真心落梧桐》/ 年代情感连续漫剧",
-  "《重回深渊：卧底女王》/ 犯罪悬疑女主剧",
-  "《游戏物资带回现实》/ 第 38—40 集高光",
-];
+const heroCaptions = ["《被弃深山，白虎报恩助我赶山暴富》/ 第 34 集","《荒年被弃乱葬岗，捡个山神老婆翻身》/ 第 74 集","《契约人鱼公主》/ 第 31 集"];
 
-const heroProjectIds = ["wutong", "undercover", "game"];
+const heroProjectIds = ["white-tiger-34","mountain-wife-74","mermaid-31"];
 const projectOrder = Object.keys(projects);
 const pipelineContent = [
   {
@@ -307,7 +303,7 @@ function applyProjectFilter(filter) {
     button.classList.toggle("is-active", active);
     button.setAttribute("aria-pressed", String(active));
   });
-  if (filterStatus) filterStatus.textContent = `正在展示 ${visibleCount} 部作品`;
+  if (filterStatus) filterStatus.textContent = `正在展示 ${visibleCount} 集作品`;
 }
 
 filterButtons.forEach((button) => {
