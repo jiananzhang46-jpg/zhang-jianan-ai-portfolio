@@ -480,7 +480,7 @@ startHeroTimer();
 updateScrollState();
 
 // Keep the screening room quiet when the viewer starts another film.
-const screeningVideos = [...document.querySelectorAll("#design video, #product-videos video")];
+const screeningVideos = [...document.querySelectorAll("#october video, #design video, #product-videos video")];
 screeningVideos.forEach((video) => {
   video.addEventListener("play", () => {
     screeningVideos.forEach((other) => {
