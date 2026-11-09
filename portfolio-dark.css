@@ -2238,6 +2238,10 @@ body.has-fine-pointer .pointer-glow {
   background: #000;
 }
 
+#october .episode-frame {
+  aspect-ratio: 9 / 16;
+}
+
 .episode-frame::before {
   position: absolute;
   z-index: 1;
